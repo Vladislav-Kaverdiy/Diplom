@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1"
+         xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+<display-name>payment</display-name>
+<welcome-file-list>
+
+<welcome-file>home.jsp</welcome-file>
+</welcome-file-list>
+
+<listener>
+    <listener-class>source.it.com.servlets.listeners.ContextListener</listener-class>
+</listener>
+
+    <servlet>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <servlet-class>source.it.com.servlets.DispatcherServlet</servlet-class>
+
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DispatcherServlet</servlet-name>
+        <url-pattern>/servlet.do</url-pattern>
+    </servlet-mapping>
+    <filter>
+        <filter-name>AuthorizationFilter</filter-name>
+        <filter-class>source.it.com.filters.AuthorizationFilter</filter-class>
+        <init-param>
+            <param-name>administrator</param-name>
+            <param-value>manageUser block_user deleteUser unblockClient blockClientBill createUserPayment unblockClientBill manageCreditCard manageRequest
+                unblockRequest manageClientBills manageUnblockRequests unblockRequest</param-value>
+        </init-param>
+        <init-param>
+            <param-name>client</param-name>
+            <param-value>manageCreditCard createCreditCard addMoney showChangeBalance createUserPayment addFunds blockCreditCard unblockCreditCard
+                managePayments addPreparedPayment sendPayment statisticPayments savePaymentInPdf reportsPayments redirectReport deletePayment</param-value>
+        </init-param>
+        <init-param>
+            <param-name>out-of-control</param-name>
+            <param-value>login logout registration changeLocale</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>AuthorizationFilter</filter-name>
+        <servlet-name>DispatcherServlet</servlet-name>
+    </filter-mapping>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
+        <param-value>resources</param-value>
+    </context-param>
+    <context-param>
+        <param-name>javax.servlet.jsp.jstl.fmt.locale</param-name>
+        <param-value>en</param-value>
+    </context-param>
+</web-app>
