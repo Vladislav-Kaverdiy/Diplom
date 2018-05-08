@@ -35,18 +35,18 @@
                         <td>
                             <c:choose>
                             <c:when test="${user.blocked}">
-                            <a class="btn btn-success" href="servlet.do?command=block_user&login=${user.login}">Unblock
+                            <a class="btn btn-success" href="servlet.do?command=block_user&userId=${user.userId}">Unblock
                                 Block client bill</a>
                             </c:when>
                             <c:otherwise>
-                            <a class="btn btn-danger" href="servlet.do?command=block_user&login=${user.login}">Block
+                            <a class="btn btn-danger" href="servlet.do?command=block_user&userId=${user.userId}">Block
                                 client bill</a>
                             </c:otherwise>
                             </c:choose>
-                        <td><a class="btn btn-primary" href="servlet.do?command=manageCreditCard">Show Credit Cards</a>
-                        </td>
+                        <td><a class="btn btn-primary" href="servlet.do?command=manageCreditCard">Show Credit Cards</a></td>
+                        <td><a class="btn btn-primary" href="servlet.do?command=editUser&userId=${user.userId}">Edit User</a></td>
                         <td><a class="btn btn-primary"
-                               href="servlet.do?command=deleteUser&login=${user.login}">Delete</a></td>
+                               href="servlet.do?command=deleteUser&userId=${user.userId}">Delete</a></td>
 
                         </td>
                     </tr>
