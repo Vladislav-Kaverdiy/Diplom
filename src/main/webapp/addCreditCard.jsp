@@ -1,7 +1,7 @@
  <!DOCTYPE html>
 <html>
 <head>
-    <title>Register</title>
+    <title>Add Credit Card</title>
     <link rel="stylesheet" href="styles/templatesstyles/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="styles/templatesstyles/bootstrap-theme.min.css" type="text/css">
 </head>

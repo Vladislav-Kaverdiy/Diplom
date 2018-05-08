@@ -1,9 +1,11 @@
 <!DOCTYPE html>
+<html>
 <head>
     <title>addMoney</title>
-    <%@ include file="layouts/siteHeader.jspf"%>
+    <link rel="stylesheet" href="styles/templatesstyles/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="styles/templatesstyles/bootstrap-theme.min.css" type="text/css">
 </head>
-
+<body>
 <%@ include file="layouts/siteNavigation.jspf"%>
 
 
@@ -23,10 +25,10 @@
                     </div>
                 </form>
             </div>
-        </div>
-    </div>
-</div>
 
 
-<%@ include file="layouts/siteFooter.jspf"%>
+<script src="scripts/templatesscripts/jquery-3.2.1.min.js"></script>
+<script src="scripts/templatesscripts/bootstrap.min.js"></script>
+</body>
+</html>
 
