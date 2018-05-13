@@ -20,6 +20,7 @@ public  enum CommandTypes {
     CREATE_USER_PAYMENT("createUserPayment"),
     SHOW_CHANGE_BALANCE("showChangeBalance"),
     DELETE_USER("deleteUser"),
+    DELETE_CREDIT_CARD("deleteCreditCard"),
     LOGOUT("logout");
 
     private String commandName;

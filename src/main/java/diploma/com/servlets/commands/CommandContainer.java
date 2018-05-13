@@ -18,6 +18,7 @@ public class CommandContainer {
 
     static {
         commands.put(CommandTypes.DELETE_USER, new DeleteUser());
+        commands.put(CommandTypes.DELETE_CREDIT_CARD, new DeleteCreditCard());
         commands.put(CommandTypes.REGISTRATION, new Registration());
         commands.put(CommandTypes.LOGIN, new Login());
         commands.put(CommandTypes.LOGOUT, new Logout());

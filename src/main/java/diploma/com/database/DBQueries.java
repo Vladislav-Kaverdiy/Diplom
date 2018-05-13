@@ -30,6 +30,7 @@ public interface DBQueries {
             + " WHERE credit_card_id=?";
 
 
+     String SQL_DELETE_CREDIT_CARD_BY_CREDIT_CARD_ID = "DELETE FROM credit_cards WHERE credit_card_id=?";
 
      String SQL_INSERT_BALANCE_CREDIT_CARD = "INSERT INTO credit_cards (balance)VALUE(?)";
 

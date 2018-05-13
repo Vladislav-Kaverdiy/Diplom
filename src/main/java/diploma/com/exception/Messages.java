@@ -38,6 +38,7 @@ public interface Messages {
 	 String ERR_CANNOT_OBTAIN_CREDIT_CARD_BY_ID = "Cannot obtain a credit card by id";
 	 String ERR_CANNOT_OBTAIN_CREDIT_CARD_BY_USER_ID = "Cannot obtain a credit card by user id";
 	 String ERR_CANNOT_UPDATE_CREDIT_CARD = "Cannot update a credit card";
+	 String ERR_CANNOT_UPDATE_BALANCE_BY_CREDIT_CARD = "Cannot update balance by credit card";
 	 String ERR_CANNOT_UPDATE_CREDIT_CARD_TO_BLOCKED_STATE = "Cannot update a credit card to the blocked state";
 	 String ERR_CANNOT_UPDATE_CREDIT_CARD_TO_UNBLOCKED_STATE = "Cannot update a credit card to the unblocked state";
 	
@@ -46,6 +47,7 @@ public interface Messages {
 	 String ERR_CANNOT_OBTAIN_UNBLOCK_REQUEST_BY_STATE = "Cannot obtain an unblock requests by state";
 	 String ERR_CANNOT_OBTAIN_COUNT_UNBLOCK_REQUESTS = "Cannot obtain a count unblock requests";
 	 String ERR_CANNOT_UPDATE_UNBLOCK_REQUEST = "Cannot update an unblock request";
+	String ERR_CANNOT_DELETE_CREDIT_CARD = "Cannot delete  credit card ";
 
 	// Manipulate Payments errors
 	 String ERR_CANNOT_ADD_USER_PAYMENT = "Cannot insert payment";

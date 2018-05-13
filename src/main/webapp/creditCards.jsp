@@ -37,6 +37,7 @@
                         <td>${creditCard.yearExpiration}</td>
                         <td>${creditCard.bill}</td>
                         <td>${creditCard.balance}</td>
+                        <td></td>
                         <td>
                         <c:choose>
                             <c:when test="${creditCard.blocked}">
@@ -46,8 +47,11 @@
                                 <%--<button type="button" class="btn btn-success">Add money</button>--%>
                                 <a href="servlet.do?command=showChangeBalance&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-success">Add money</a>
                             </c:otherwise>
+
                         </c:choose>
                         </td>
+                        <td> <%--<button type="button" class="btn btn-success">Add money</button>--%>
+                            <a href="servlet.do?command=deleteCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-danger">Delete</a></td>
                     </tr>
                 </c:forEach>
                 </tbody>
