@@ -64,7 +64,6 @@ public class UserDaoImpl implements UserDao {
             if (generatedKeys.next()) {
                 user.setUserId(generatedKeys.getInt(1));
             }
-            connection.commit();
             LOG.error(Messages.ERR_CANNOT_CREATE_USER);
             return user;
         }
@@ -78,7 +77,6 @@ public class UserDaoImpl implements UserDao {
 
             preparedStatement.setInt(1, userId);
             preparedStatement.executeUpdate();
-            connection.commit();
             LOG.error(Messages.ERR_CANNOT_DELETE_USER);
         }
     }
@@ -92,7 +90,6 @@ public class UserDaoImpl implements UserDao {
             preparedStatement.setBoolean(1, userState);
             preparedStatement.setInt(2, userId);
             preparedStatement.executeUpdate();
-            connection.commit();
             LOG.error(Messages.ERR_CANNOT_UPDATE_USER_STATE);
         }
     }
@@ -109,7 +106,6 @@ public class UserDaoImpl implements UserDao {
             preparedStatement.setString(4, user.getLogin());
             preparedStatement.setInt(5, user.getUserId());
             preparedStatement.executeUpdate();
-            connection.commit();
             LOG.error(Messages.ERR_CANNOT_UPDATE_USER);
         }
     }

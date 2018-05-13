@@ -44,7 +44,7 @@ public class CreditCardDao {
                 LOG.error(Messages.ERR_CANNOT_ADD_CREDIT_CARD
                         + creditCard.toString());
             }
-            con.commit();
+            //con.commit();
         } catch (SQLException ex) {
             db.rollback(con);
             LOG.error(Messages.ERR_CANNOT_ADD_CREDIT_CARD, ex);
@@ -63,7 +63,7 @@ public class CreditCardDao {
             pstmt = con.prepareStatement(DBQueries.SQL_INSERT_BALANCE_CREDIT_CARD);
             pstmt.setDouble(1, creditCard.getBalance());
             pstmt.executeUpdate();
-            con.commit();
+          //  con.commit();
         } catch (SQLException ex) {
             db.rollback(con);
             LOG.error(Messages.ERR_CANNOT_UPDATE_CREDIT_CARD, ex);
@@ -89,7 +89,7 @@ public class CreditCardDao {
             while (rs.next()) {
                 creditCards.add(extractCreditCard(rs));
             }
-            con.commit();
+          //  con.commit();
         } catch (SQLException ex) {
             db.rollback(con);
             LOG.error(Messages.ERR_CANNOT_OBTAIN_CREDIT_CARD_BY_USER_ID, ex);
@@ -117,7 +117,7 @@ public class CreditCardDao {
             while (rs.next()) {
                 creditCards.add(extractCreditCard(rs));
             }
-            con.commit();
+           // con.commit();
         } catch (SQLException ex) {
             db.rollback(con);
             LOG.error(Messages.ERR_CANNOT_OBTAIN_CREDIT_CARD_BY_USER_ID, ex);
@@ -159,7 +159,7 @@ public class CreditCardDao {
             pstmt.setDouble(k++, creditCard.getBalance());
             pstmt.setInt(k++, creditCard.getCreditCardId());
             pstmt.executeUpdate();
-            con.commit();
+          //  con.commit();
         } catch (SQLException ex) {
             db.rollback(con);
             LOG.error(Messages.ERR_CANNOT_UPDATE_CREDIT_CARD, ex);
@@ -181,7 +181,7 @@ public class CreditCardDao {
             pstmt.setBoolean(k++, creditCardState);
             pstmt.setInt(k++, creditCardId);
             pstmt.executeUpdate();
-            con.commit();
+           // con.commit();
         } catch (SQLException ex) {
             db.rollback(con);
             LOG.error(Messages.ERR_CANNOT_UPDATE_CREDIT_CARD, ex);
@@ -200,7 +200,7 @@ public class CreditCardDao {
             pstmt.setDouble(1, creditCard.getBalance());
             pstmt.setInt(2, creditCard.getCreditCardId());
             pstmt.executeUpdate();
-            con.commit();
+        //    con.commit();
         } catch (SQLException ex) {
             db.rollback(con);
             LOG.error(Messages.ERR_CANNOT_UPDATE_CREDIT_CARD, ex);

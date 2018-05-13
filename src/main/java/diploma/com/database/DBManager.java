@@ -49,8 +49,8 @@ public final class DBManager {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection("jdbc:mysql://localhost:3306/payments", "root", "KaVeRdIy1996");
-            con.setAutoCommit(false);
-            con.setTransactionIsolation(2);
+            con.setAutoCommit(true);
+            con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED);
         } catch (Exception ex) {
             LOG.error(Messages.ERR_CANNOT_OBTAIN_CONNECTION, ex);
             throw new DBException(Messages.ERR_CANNOT_OBTAIN_CONNECTION, ex);
