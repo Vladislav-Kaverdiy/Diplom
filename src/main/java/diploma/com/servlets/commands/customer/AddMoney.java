@@ -1,7 +1,7 @@
 package diploma.com.servlets.commands.customer;
 
 import org.apache.commons.lang3.StringUtils;
-import diploma.com.database.dao.CreditCardDao;
+import diploma.com.database.daoImpl.CreditCardDaoImpl;
 import diploma.com.exception.AppException;
 import diploma.com.model.CreditCard;
 import diploma.com.servlets.commands.Command;
@@ -21,7 +21,7 @@ public class AddMoney implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException,
             AppException, SQLException {
 
-        CreditCardDao creditCardDao = new CreditCardDao();
+        CreditCardDaoImpl creditCardDaoImpl = new CreditCardDaoImpl();
         CreditCard creditCard = new CreditCard();
 
 
@@ -31,14 +31,14 @@ public class AddMoney implements Command {
         if (StringUtils.isNotEmpty(Id)) {
 
             Integer creditCardId = Integer.parseInt(Id);
-            creditCard = creditCardDao.findCreditCardById(creditCardId);
+            creditCard = creditCardDaoImpl.findCreditCardById(creditCardId);
         }
 
 
         /*creditCard.setBalance(Double.valueOf(request.getParameter("balance")));
-        creditCardDao.updateCreditCardBalance(creditCard);*/
+        creditCardDaoImpl.updateCreditCardBalance(creditCard);*/
         creditCard.setBalance(Double.valueOf((request.getParameter("balance"))));
-        creditCardDao.updateCreditCardBalance(creditCard);
+        creditCardDaoImpl.updateCreditCardBalance(creditCard);
 
 
 

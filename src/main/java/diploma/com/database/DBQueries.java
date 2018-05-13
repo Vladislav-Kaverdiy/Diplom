@@ -16,7 +16,7 @@ public interface DBQueries {
 
       String SQL_DELETE_USER_BY_ID = "DELETE FROM users WHERE user_id=?";
 
-    //Queries for CreditCard, CreditCardDao class
+    //Queries for CreditCard, CreditCardDaoImpl class
      String SQL_INSERT_CREDIT_CARD = "INSERT INTO credit_cards(bill, credit_card_number, description, month_expiration, year_expiration, cvs, blocked, balance, user_id)VALUE(?,?,?,?,?,?,?,?,?)";
      String SQL_FIND_ALL_CREDIT_CARDS_BY_USER_ID = "SELECT * FROM credit_cards WHERE user_id=?";
      String SQL_FIND_NOT_BLOCKED_CREDIT_CARD_BY_ID = "SELECT * FROM credit_cards WHERE blocked = 1 AND credit_card_id=?";

@@ -16,7 +16,7 @@ public class PaymentService {
 
 /*
         try {
-            CreditCardDao creditCardDao = new CreditCardDao();
+            CreditCardDaoImpl creditCardDao = new CreditCardDaoImpl();
             UserPaymentDao userPaymentDao = new UserPaymentDao();
             CreditCard creditCard = creditCardDao.getCreditCardsById(connection);
             creditCard.setBalance(creditCard.getBalance()- userPayment.getSum());

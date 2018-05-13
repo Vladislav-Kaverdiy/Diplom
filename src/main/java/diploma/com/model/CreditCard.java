@@ -6,54 +6,54 @@ public class CreditCard implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	private int creditCardId;
-	private long creditCardNumber;
-	private int monthExpiration;
-	private int yearExpiration;
-	private int cvs;
+	private Integer creditCardId;
+	private Long creditCardNumber;
+	private Integer monthExpiration;
+	private Integer yearExpiration;
+	private Integer cvs;
 	private String description;
-	private double balance;
-	private int userId;
+	private Double balance;
+	private Integer userId;
 	private boolean blocked;
-	private long bill;
+	private Long bill;
 
-	public int getCreditCardId() {
+	public Integer getCreditCardId() {
 		return creditCardId;
 	}
 
-	public void setCreditCardId(int creditCardId) {
+	public void setCreditCardId(Integer creditCardId) {
 		this.creditCardId = creditCardId;
 	}
 
-	public long getCreditCardNumber() {
+	public Long getCreditCardNumber() {
 		return creditCardNumber;
 	}
 
-	public void setCreditCardNumber(long creditCardNumber) {
+	public void setCreditCardNumber(Long creditCardNumber) {
 		this.creditCardNumber = creditCardNumber;
 	}
 
-	public int getMonthExpiration() {
+	public Integer getMonthExpiration() {
 		return monthExpiration;
 	}
 
-	public void setMonthExpiration(int monthExpiration) {
+	public void setMonthExpiration(Integer monthExpiration) {
 		this.monthExpiration = monthExpiration;
 	}
 
-	public int getYearExpiration() {
+	public Integer getYearExpiration() {
 		return yearExpiration;
 	}
 
-	public void setYearExpiration(int yearExpiration) {
+	public void setYearExpiration(Integer yearExpiration) {
 		this.yearExpiration = yearExpiration;
 	}
 
-	public int getCvs() {
+	public Integer getCvs() {
 		return cvs;
 	}
 
-	public void setCvs(int cvs) {
+	public void setCvs(Integer cvs) {
 		this.cvs = cvs;
 	}
 
@@ -65,19 +65,19 @@ public class CreditCard implements Serializable {
 		this.description = description;
 	}
 
-	public double getBalance() {
+	public Double getBalance() {
 		return balance;
 	}
 
-	public void setBalance(double balance) {
+	public void setBalance(Double balance) {
 		this.balance = balance;
 	}
 
-	public int getUserId() {
+	public Integer getUserId() {
 		return userId;
 	}
 
-	public void setUserId(int userId) {
+	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
 
@@ -89,11 +89,11 @@ public class CreditCard implements Serializable {
 		this.blocked = blocked;
 	}
 
-	public long getBill() {
+	public Long getBill() {
 		return bill;
 	}
 
-	public void setBill(long bill) {
+	public void setBill(Long bill) {
 		this.bill = bill;
 	}
 

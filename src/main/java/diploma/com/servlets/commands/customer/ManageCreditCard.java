@@ -1,7 +1,7 @@
 package diploma.com.servlets.commands.customer;
 
 import  org.apache.log4j.Logger;
-import diploma.com.database.dao.CreditCardDao;
+import diploma.com.database.daoImpl.CreditCardDaoImpl;
 import diploma.com.exception.AppException;
         import diploma.com.exception.Messages;
         import diploma.com.model.CreditCard;
@@ -25,8 +25,8 @@ public class ManageCreditCard implements Command {
         try {
             LOG.debug("Command starts");
             User user = (User) request.getSession(false).getAttribute("user");
-            CreditCardDao creditCardDao = new CreditCardDao();
-            List<CreditCard> creditCards = creditCardDao.getCreditCardsByUserId(user.getUserId());
+            CreditCardDaoImpl creditCardDaoImpl = new CreditCardDaoImpl();
+            List<CreditCard> creditCards = creditCardDaoImpl.getCreditCardsByUserId(user.getUserId());
             LOG.trace("Get credit cards of user--> " + user.getFullName());
             request.setAttribute("creditCards", creditCards);
 

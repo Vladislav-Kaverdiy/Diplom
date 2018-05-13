@@ -6,9 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import diploma.com.database.daoImpl.CreditCardDaoImpl;
 import org.apache.log4j.Logger;
 
-import diploma.com.database.dao.CreditCardDao;
 import diploma.com.exception.AppException;
 import diploma.com.exception.Messages;
 import diploma.com.model.CreditCard;
@@ -40,8 +40,8 @@ public class AddCreditCard implements Command {
 
             LOG.trace("Get request parameters and crete credit card--> "
                     + creditCard.toString());
-            CreditCardDao creditCardDao = new CreditCardDao();
-            creditCardDao.addCreditCards(creditCard);
+            CreditCardDaoImpl creditCardDaoImpl = new CreditCardDaoImpl();
+            creditCardDaoImpl.addCreditCards(creditCard);
 
         } catch (Exception ex) {
             LOG.error(Messages.ERR_CANNOT_ADD_CREDIT_CARD, ex);
