@@ -19,7 +19,6 @@ public interface DBQueries {
     //Queries for CreditCard, CreditCardDaoImpl class
      String SQL_INSERT_CREDIT_CARD = "INSERT INTO credit_cards(bill, credit_card_number, description, month_expiration, year_expiration, cvs, blocked, balance, user_id)VALUE(?,?,?,?,?,?,?,?,?)";
      String SQL_FIND_ALL_CREDIT_CARDS_BY_USER_ID = "SELECT * FROM credit_cards WHERE user_id=?";
-     String SQL_FIND_NOT_BLOCKED_CREDIT_CARD_BY_ID = "SELECT * FROM credit_cards WHERE blocked = 1 AND credit_card_id=?";
      String SQL_FIND_CREDIT_CARD_BY_ID = "SELECT * FROM credit_cards WHERE credit_card_id=?";
      String SQL_UPDATE_CREDIT_CARD_STATE = "UPDATE credit_cards SET blocked=?"
             + " WHERE credit_card_id=?";
@@ -32,7 +31,6 @@ public interface DBQueries {
 
      String SQL_DELETE_CREDIT_CARD_BY_CREDIT_CARD_ID = "DELETE FROM credit_cards WHERE credit_card_id=?";
 
-     String SQL_INSERT_BALANCE_CREDIT_CARD = "INSERT INTO credit_cards (balance)VALUE(?)";
 
 
 //Queries for UserPayment, UserPaymentDao class

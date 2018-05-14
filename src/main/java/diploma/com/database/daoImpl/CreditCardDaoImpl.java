@@ -137,35 +137,6 @@ public class CreditCardDaoImpl implements CreditCardDao {
     }
 
     @Override
-    public void insertCreditCardBalance(CreditCard creditCard) throws SQLException {
-
-        try (Connection connection = db.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(DBQueries.SQL_INSERT_BALANCE_CREDIT_CARD)) {
-
-            preparedStatement.setDouble(1, creditCard.getBalance());
-            preparedStatement.executeUpdate();
-            LOG.error(Messages.ERR_CANNOT_UPDATE_CREDIT_CARD);
-        }
-    }
-
-    @Override
-    public List<CreditCard> getNotBlockedCreditCardsByUserId(Integer userId) throws SQLException {
-        List<CreditCard> creditCards = new ArrayList<>();
-
-        try (Connection connection = db.getConnection();
-             PreparedStatement preparedStatement = connection.prepareStatement(DBQueries.SQL_FIND_NOT_BLOCKED_CREDIT_CARD_BY_ID)) {
-
-            preparedStatement.setInt(1, userId);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                creditCards.add(extractCreditCard(resultSet));
-            }
-            LOG.error(Messages.ERR_CANNOT_OBTAIN_CREDIT_CARD_BY_USER_ID);
-        }
-        return creditCards;
-    }
-
-    @Override
     public CreditCard extractCreditCard(ResultSet rs) throws SQLException {
         CreditCard creditCard = new CreditCard();
         creditCard.setBill(rs.getLong(DBFields.BILL));

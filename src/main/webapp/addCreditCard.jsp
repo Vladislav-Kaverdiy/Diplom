@@ -4,10 +4,12 @@
     <title>Add Credit Card</title>
     <link rel="stylesheet" href="styles/templatesstyles/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="styles/templatesstyles/bootstrap-theme.min.css" type="text/css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-inverse">
-
+    <%@ include file="layouts/siteNavigation.jspf"%>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="nav navbar-nav">
                 <li class="#"><a href="home.jsp">Home</a></li>

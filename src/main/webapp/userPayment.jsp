@@ -4,6 +4,8 @@
         <title>User Payment</title>
         <link rel="stylesheet" href="styles/templatesstyles/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="styles/templatesstyles/bootstrap-theme.min.css" type="text/css">
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
 <body>
 <%@ include file="layouts/siteNavigation.jspf"%>

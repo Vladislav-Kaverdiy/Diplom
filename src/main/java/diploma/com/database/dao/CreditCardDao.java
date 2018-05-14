@@ -22,9 +22,5 @@ public interface CreditCardDao {
 
     void updateCreditCardState(boolean creditCardState, Integer creditCardId) throws SQLException;
 
-    void insertCreditCardBalance(CreditCard creditCard) throws SQLException;
-
-    List<CreditCard> getNotBlockedCreditCardsByUserId(Integer userId) throws SQLException;
-
     CreditCard extractCreditCard(ResultSet rs) throws SQLException;
 }
