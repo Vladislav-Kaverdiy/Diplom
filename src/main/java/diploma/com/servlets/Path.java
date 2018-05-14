@@ -18,4 +18,5 @@ public interface Path {
     String REQUESTS_PAGE = "/servlet.do?command=manageRequest";
     String COMMAND_MANAGE_PAYMENTS = "/servlet.do?command=managePayments";
     String PAGE_ADD_BAlANCE = "/addMoney.jsp";
+    String PAGE_EDIT_CREDIT_CARD= "/editCreditCard.jsp";
 }

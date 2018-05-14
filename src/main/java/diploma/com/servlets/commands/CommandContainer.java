@@ -32,6 +32,8 @@ public class CommandContainer {
         commands.put(CommandTypes.MANAGE_PAYMENTS, new ManagePayments());
         commands.put(CommandTypes.CREATE_USER_PAYMENT, new AddPayment());
         commands.put(CommandTypes.BLOCK_CREDIT_CARD, new BlockCreditCard());
+        commands.put(CommandTypes.EDIT_CREDIT_CARD, new EditCreditCard());
+        commands.put(CommandTypes.SHOW_EDIT_CREDIT_CARD, new ShowEditCreditCard());
         commands.put(CommandTypes.SHOW_CHANGE_BALANCE, new ShowChangeBalance());
 
     }

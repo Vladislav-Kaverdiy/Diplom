@@ -25,7 +25,7 @@
                     <th>Balance</th>
                     <th>Blocked</th>
                     <th></th>
-
+                    <th></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -62,9 +62,12 @@
                         </td>
                         <td> <%--<button type="button" class="btn btn-success">Add money</button>--%>
                             <a href="servlet.do?command=deleteCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-danger">Delete</a></td>
+                        <td> <%--<button type="button" class="btn btn-success">Add money</button>--%>
+                            <a href="servlet.do?command=showEditCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-info">Edit</a></td>
                     </tr>
+
                 </c:forEach>
-                </tbody>
+                </tbody
             </table>
             <div class="container">
                 <div class="row">

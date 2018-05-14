@@ -28,8 +28,6 @@ public class AddMoney implements Command {
 
         String Id = request.getParameter("creditCardId");
 
-
-
         if (StringUtils.isNotEmpty(Id)) {
 
             Integer creditCardId = Integer.parseInt(Id);

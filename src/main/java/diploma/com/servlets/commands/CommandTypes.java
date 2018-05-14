@@ -22,6 +22,8 @@ public  enum CommandTypes {
     DELETE_USER("deleteUser"),
     DELETE_CREDIT_CARD("deleteCreditCard"),
     BLOCK_CREDIT_CARD("blockCreditCard"),
+    EDIT_CREDIT_CARD("editCreditCard"),
+    SHOW_EDIT_CREDIT_CARD("showEditCreditCard"),
     LOGOUT("logout");
 
     private String commandName;

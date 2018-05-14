@@ -110,9 +110,14 @@ public class CreditCardDaoImpl implements CreditCardDao {
         try (Connection connection = db.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(DBQueries.SQL_UPDATE_CREDIT_CARD)) {
 
-            preparedStatement.setBoolean(1, creditCard.isBlocked());
-            preparedStatement.setDouble(2, creditCard.getBalance());
-            preparedStatement.setInt(3, creditCard.getCreditCardId());
+            preparedStatement.setLong(1, creditCard.getBill());
+            preparedStatement.setLong(2, creditCard.getCreditCardNumber());
+            preparedStatement.setString(3, creditCard.getDescription());
+            preparedStatement.setInt(4, creditCard.getMonthExpiration());
+            preparedStatement.setInt(5, creditCard.getYearExpiration());
+            preparedStatement.setInt(6, creditCard.getCvs());
+            preparedStatement.setDouble(7, creditCard.getBalance());
+            preparedStatement.setInt(8, creditCard.getCreditCardId());
             preparedStatement.executeUpdate();
             LOG.error(Messages.ERR_CANNOT_UPDATE_CREDIT_CARD);
         }
