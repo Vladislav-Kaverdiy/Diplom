@@ -1,10 +1,7 @@
 package diploma.com.servlets.commands;
 
-import diploma.com.servlets.commands.admin.BlockCreditCard;
+import diploma.com.servlets.commands.admin.*;
 import org.apache.log4j.Logger;
-import diploma.com.servlets.commands.admin.BlockUser;
-import diploma.com.servlets.commands.admin.DeleteUser;
-import diploma.com.servlets.commands.admin.ManageUsers;
 import diploma.com.servlets.commands.application.ChangeLocaleCommand;
 import diploma.com.servlets.commands.customer.*;
 
@@ -34,6 +31,8 @@ public class CommandContainer {
         commands.put(CommandTypes.BLOCK_CREDIT_CARD, new BlockCreditCard());
         commands.put(CommandTypes.EDIT_CREDIT_CARD, new EditCreditCard());
         commands.put(CommandTypes.SHOW_EDIT_CREDIT_CARD, new ShowEditCreditCard());
+        commands.put(CommandTypes.MANAGE_CREDIT_CARD_ADMIN, new ManageCreditCardAdmin());
+        commands.put(CommandTypes.EDIT_USER, new EditUser());
         commands.put(CommandTypes.SHOW_CHANGE_BALANCE, new ShowChangeBalance());
 
     }

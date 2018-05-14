@@ -1,33 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Add Credit Card</title>
+    <title>Edit Credit Card</title>
     <link rel="stylesheet" href="styles/templatesstyles/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="styles/templatesstyles/bootstrap-theme.min.css" type="text/css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <%@ include file="layouts/siteNavigation.jspf"%>
-<nav class="navbar navbar-inverse">
-
-    <div class="collapse navbar-collapse" id="myNavbar">
-        <ul class="nav navbar-nav">
-            <li class="#"><a href="home.jsp">Home</a></li>
-            <li class="#"><a href="users.jsp">Users</a></li>
-
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-            <li><a href="registration.jsp"><span class=""></span>Register</a></li>
-            <li><a href="login.jsp"><span class=""></span>Login</a></li>
-        </ul>
-    </div>
-    </div>
-</nav>
 
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 col-md-9">
-            <h2>Adding new credit card</h2>
+            <h2>Edit credit card</h2>
             <form action="servlet.do" method="post" >
                 <input type="hidden" name="command" value="editCreditCard"/>
                 <input type="hidden" name="creditCardId" value="${creditCardId}"/>
@@ -45,16 +30,16 @@
                     <input  name="creditcardYear" type="text" class="form-control" id="email" placeholder="Enter year">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">CVS:</label>
-                    <input name="creditcardCVS" type="text" class="form-control" id="pwd" placeholder="Enter CVS">
+                    <label for="cvc">CVS:</label>
+                    <input name="creditcardCVS" type="text" class="form-control" id="cvc" placeholder="Enter CVS">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Balance:</label>
-                    <input name="balance" type="text" class="form-control" id="pwd" placeholder="Enter bill">
+                    <label for="bill">Balance:</label>
+                    <input name="balance" type="text" class="form-control" id="bill" placeholder="Enter bill">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Description:</label>
-                    <input name="description" type="text" class="form-control" id="pwd" placeholder="Enter description">
+                    <label for="description">Description:</label>
+                    <input name="description" type="text" class="form-control" id="description" placeholder="Enter description">
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-success btn-block"><h4>Edit card</h4></button>

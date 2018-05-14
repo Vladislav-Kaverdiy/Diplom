@@ -21,6 +21,7 @@ public class BlockCreditCard implements Command {
     public String execute(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException, AppException, SQLException {
 
         request.setAttribute("creditCardId", request.getParameter("creditCardId"));
+        request.setAttribute("userId", request.getParameter("userId"));
 
         CreditCardDaoImpl creditCardDaoImpl = new CreditCardDaoImpl();
         CreditCard creditCard = new CreditCard();
@@ -35,6 +36,6 @@ public class BlockCreditCard implements Command {
         creditCardDaoImpl.updateCreditCardState(!creditCard.isBlocked(), creditCard.getCreditCardId());
 
 
-        return CommandContainer.get(CommandTypes.MANAGE_CREDIT_CARD).execute(request, response);
+        return CommandContainer.get(CommandTypes.MANAGE_CREDIT_CARD_ADMIN).execute(request, response);
     }
 }

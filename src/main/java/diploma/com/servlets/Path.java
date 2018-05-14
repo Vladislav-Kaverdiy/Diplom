@@ -6,7 +6,9 @@ package diploma.com.servlets;
 public interface Path {
     String PAGE_ERROR_PAGE = "/errorPage.jsp";
     String COMMAND_CLIENT_MANAGE_CREDIT_CARD = "/servlet.do?command=manageCreditCard";
+    String COMMAND_CLIENT_MANAGE_CREDIT_CARD_ADMIN = "/servlet.do?command=manageCreditCardAdmin";
     String PAGE_CLIENT_MANAGE_BILLS = "/creditCards.jsp";
+    String PAGE_ADMIN_MANAGE_BILLS = "/creditCardsAdmin.jsp";
     String PAGE_CLIENT_ERROR_PAGE = "/errorPage.jsp";
     String PAGE_REGISTRATION = "/registration.jsp";
     String LOGIN_PAGE = "/login.jsp";

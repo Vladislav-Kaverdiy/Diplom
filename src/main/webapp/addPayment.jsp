@@ -7,21 +7,8 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
+
 <%@ include file="layouts/siteNavigation.jspf"%>
-<nav class="navbar navbar-inverse">
-    <div class="container-fluid">
-        <div class="navbar-header">
-
-            <a class="navbar-brand" href="addPayment.jsp">Payments</a>
-        </div>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="registration.jsp"><span class=""></span>Register</a></li>
-                <li><a href="login.jsp"><span class=""></span>Login</a></li>
-            </ul>
-        </div>
-    </div>
-</nav>
 
 <div class="container">
     <div class="row">

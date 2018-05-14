@@ -51,36 +51,21 @@
                                 </c:otherwise>
                             </c:choose>--%>
 
-                        <c:choose>
-                            <c:when test="${creditCard.blocked}">
-                         <a  href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-danger " >Blocked</a>
-                            </c:when>
-                            <c:otherwise>
+
                                 <%--<button type="button" class="btn btn-success">Add money</button>--%>
                                 <a href="servlet.do?command=showChangeBalance&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-success">Add money</a>
-                            </c:otherwise>
 
-                        </c:choose>
                         </td>
                         <td> <%--<button type="button" class="btn btn-success">Add money</button>--%>
                             <a href="servlet.do?command=deleteCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-danger">Delete</a></td>
                         <td> <%--<button type="button" class="btn btn-success">Add money</button>--%>
                             <a href="servlet.do?command=showEditCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-info">Edit</a></td>
                     </tr>
-
                 </c:forEach>
                 </tbody
             </table>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-offset-1 col-md-2">
-                        <a href="addCreditCard.jsp" class="btn btn-success btn-lg">Add new card</a>
-                    </div>
-                </div>
+            </div>
         </div>
-    </div>
-</div>
-
 <script src="scripts/templatesscripts/jquery-3.2.1.min.js"></script>
 <script src="scripts/templatesscripts/bootstrap.min.js"></script>
 </body>
