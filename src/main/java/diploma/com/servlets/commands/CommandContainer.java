@@ -1,5 +1,6 @@
 package diploma.com.servlets.commands;
 
+import diploma.com.servlets.commands.admin.BlockCreditCard;
 import org.apache.log4j.Logger;
 import diploma.com.servlets.commands.admin.BlockUser;
 import diploma.com.servlets.commands.admin.DeleteUser;
@@ -30,6 +31,7 @@ public class CommandContainer {
         commands.put(CommandTypes.BLOCK_USER, new BlockUser());
         commands.put(CommandTypes.MANAGE_PAYMENTS, new ManagePayments());
         commands.put(CommandTypes.CREATE_USER_PAYMENT, new AddPayment());
+        commands.put(CommandTypes.BLOCK_CREDIT_CARD, new BlockCreditCard());
         commands.put(CommandTypes.SHOW_CHANGE_BALANCE, new ShowChangeBalance());
 
     }

@@ -16,11 +16,11 @@
                     <input type="hidden" name="creditCardId" value="${creditCardId}"/>
                     <div class="form-group">
                         <label for="balance">Adding money:</label>
-                        <input name="balance" type="text" class="form-control" id="balance" placeholder="Enter money" value="${requestScope.balance}" >
+                        <input name="balance" type="text" class="form-control" id="balance" placeholder="Enter money"  value= "${ requestScope.balance}">
                     </div>
                     <div class="text-center">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success btn-block"><h4>Adding money</h4></button>
+                            <button type="submit" class="btn btn-success large"><h1>+</h1></button>
                         </div>
                     </div>
                 </form>

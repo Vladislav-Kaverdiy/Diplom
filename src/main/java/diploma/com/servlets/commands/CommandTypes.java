@@ -21,6 +21,7 @@ public  enum CommandTypes {
     SHOW_CHANGE_BALANCE("showChangeBalance"),
     DELETE_USER("deleteUser"),
     DELETE_CREDIT_CARD("deleteCreditCard"),
+    BLOCK_CREDIT_CARD("blockCreditCard"),
     LOGOUT("logout");
 
     private String commandName;

@@ -24,11 +24,13 @@
                     <th>Bill</th>
                     <th>Balance</th>
                     <th>Blocked</th>
+                    <th></th>
 
                 </tr>
                 </thead>
                 <tbody>
                 <c:forEach var="creditCard" items="${creditCards}">
+                    <input type="hidden" name="creditCardId" value="${creditCardId}"/>
                     <tr>
                         <td>${creditCard.creditCardNumber}</td>
                         <td>${creditCard.cvs}</td>
@@ -37,11 +39,19 @@
                         <td>${creditCard.yearExpiration}</td>
                         <td>${creditCard.bill}</td>
                         <td>${creditCard.balance}</td>
-                        <td></td>
                         <td>
+                         <%--   <c:choose>
+                                <c:when test="${creditCard.blocked}">
+                                    <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-success" >Unblock</a>
+                                </c:when>
+                                <c:otherwise>
+                                    <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-danger" >Block</a>
+                                </c:otherwise>
+                            </c:choose>--%>
+
                         <c:choose>
                             <c:when test="${creditCard.blocked}">
-                                <button type="button" class="btn btn-danger disabled">Blocked</button>
+                         <a  href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-danger " >Blocked</a>
                             </c:when>
                             <c:otherwise>
                                 <%--<button type="button" class="btn btn-success">Add money</button>--%>
