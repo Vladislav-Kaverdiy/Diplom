@@ -20,6 +20,7 @@ public class DeleteCreditCardAdmin implements Command {
         request.setAttribute("creditCardId", request.getParameter("creditCardId"));
         request.setAttribute("userId", request.getParameter("userId"));
 
+
         CreditCardDaoImpl creditCardDaoImpl = new CreditCardDaoImpl();
         CreditCard creditCard = new CreditCard();
 
@@ -35,4 +36,3 @@ public class DeleteCreditCardAdmin implements Command {
         return CommandContainer.get(CommandTypes.MANAGE_CREDIT_CARD_ADMIN).execute(request, response);
     }
 }
-

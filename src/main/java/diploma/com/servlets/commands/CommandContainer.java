@@ -9,7 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CommandContainer {
-    static final Logger LOG = Logger.getLogger(CommandContainer.class);
+
 
     private static Map<CommandTypes, Command> commands = new HashMap<>();
 
