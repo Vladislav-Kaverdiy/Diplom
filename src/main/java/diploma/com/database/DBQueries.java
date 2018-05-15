@@ -10,7 +10,7 @@ public interface DBQueries {
      String SQL_INSERT_USER = "INSERT INTO users(full_name, email,login,password,register_date,role_id,blocked)VALUE(?,?,?,?,?,?,?)";
      String SQL_UPDATE_USER_STATE = "UPDATE users SET blocked=?"
             + "	WHERE user_id=?";
-     String SQL_UPDATE_USER = "UPDATE users SET full_name=?, email=?, password=?, login=?"
+     String SQL_UPDATE_USER = "UPDATE users SET full_name=?, email=?, login=?, register_date=?"
             + "	WHERE user_id=?";
 
 

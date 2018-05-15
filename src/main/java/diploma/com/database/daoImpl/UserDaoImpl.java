@@ -102,8 +102,8 @@ public class UserDaoImpl implements UserDao {
 
             preparedStatement.setString(1, user.getFullName());
             preparedStatement.setString(2, user.getEmail());
-            preparedStatement.setString(3, user.getPassword());
-            preparedStatement.setString(4, user.getLogin());
+            preparedStatement.setString(3, user.getLogin());
+            preparedStatement.setDate(4, new java.sql.Date(user.getRegisterDate().getTime()));
             preparedStatement.setInt(5, user.getUserId());
             preparedStatement.executeUpdate();
             LOG.error(Messages.ERR_CANNOT_UPDATE_USER);

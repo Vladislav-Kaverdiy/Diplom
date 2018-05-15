@@ -72,6 +72,7 @@ public class Registration implements Command {
             LOG.debug("Command finished");
 
             return Path.COMMAND_CLIENT_MANAGE_CREDIT_CARD;
+
         } catch (Exception ex) {
             LOG.error(Messages.ERR_CANNOT_REGISTRATION, ex);
             request.setAttribute("errorMessage",

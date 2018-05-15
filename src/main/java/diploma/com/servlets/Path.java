@@ -6,6 +6,8 @@ package diploma.com.servlets;
 public interface Path {
     String PAGE_ERROR_PAGE = "/errorPage.jsp";
     String COMMAND_CLIENT_MANAGE_CREDIT_CARD = "/servlet.do?command=manageCreditCard";
+    String COMMAND_MANAGE_USER = "/servlet.do?command=manageUser";
+
     String COMMAND_CLIENT_MANAGE_CREDIT_CARD_ADMIN = "/servlet.do?command=manageCreditCardAdmin";
     String PAGE_CLIENT_MANAGE_BILLS = "/creditCards.jsp";
     String PAGE_ADMIN_MANAGE_BILLS = "/creditCardsAdmin.jsp";
@@ -21,4 +23,5 @@ public interface Path {
     String COMMAND_MANAGE_PAYMENTS = "/servlet.do?command=managePayments";
     String PAGE_ADD_BAlANCE = "/addMoney.jsp";
     String PAGE_EDIT_CREDIT_CARD= "/editCreditCard.jsp";
+    String PAGE_EDIT_USER= "/editUser.jsp";
 }

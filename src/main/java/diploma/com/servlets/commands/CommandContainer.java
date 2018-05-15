@@ -1,8 +1,10 @@
 package diploma.com.servlets.commands;
 
 import diploma.com.servlets.commands.admin.*;
-import org.apache.log4j.Logger;
+import diploma.com.servlets.commands.commandsShow.ShowChangeBalance;
+import diploma.com.servlets.commands.commandsShow.ShowEditCreditCard;
 import diploma.com.servlets.commands.application.ChangeLocaleCommand;
+import diploma.com.servlets.commands.commandsShow.ShowEditUser;
 import diploma.com.servlets.commands.customer.*;
 
 import java.util.HashMap;
@@ -34,6 +36,7 @@ public class CommandContainer {
         commands.put(CommandTypes.MANAGE_CREDIT_CARD_ADMIN, new ManageCreditCardAdmin());
         commands.put(CommandTypes.EDIT_USER, new EditUser());
         commands.put(CommandTypes.DELETE_CREDIT_CARD_ADMIN, new DeleteCreditCardAdmin());
+        commands.put(CommandTypes.SHOW_EDIT_USER, new ShowEditUser());
         commands.put(CommandTypes.SHOW_CHANGE_BALANCE, new ShowChangeBalance());
 
     }

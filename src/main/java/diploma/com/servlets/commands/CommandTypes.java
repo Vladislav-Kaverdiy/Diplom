@@ -26,6 +26,7 @@ public  enum CommandTypes {
     MANAGE_CREDIT_CARD_ADMIN("manageCreditCardAdmin"),
     SHOW_EDIT_CREDIT_CARD("showEditCreditCard"),
     EDIT_USER("editUser"),
+    SHOW_EDIT_USER("showEditUser"),
     DELETE_CREDIT_CARD_ADMIN("deleteCreditCardAdmin"),
     LOGOUT("logout");
 

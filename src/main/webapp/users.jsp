@@ -47,7 +47,7 @@
                             </c:choose>
                         <td><a class="btn btn-primary" href="servlet.do?command=manageCreditCardAdmin&userId=${user.getUserId()}"> Show Credit Cards</a></td>
 
-                        <td><a class="btn btn-primary" href="servlet.do?command=editUser&userId=${user.userId}">Edit User</a></td>
+                        <td><a class="btn btn-primary" href="servlet.do?command=showEditUser&userId=${user.userId}">Edit User</a></td>
                         <td><a class="btn btn-primary"
                                href="servlet.do?command=deleteUser&userId=${user.userId}">Delete</a></td>
 

@@ -4,11 +4,11 @@ public class PaymentState {
 	private int stateId;
 	private String stateName;
 
-	public int getStateId() {
+	public Integer getStateId() {
 		return stateId;
 	}
 
-	public void setStateId(int stateId) {
+	public void setStateId(Integer stateId) {
 		this.stateId = stateId;
 	}
 
