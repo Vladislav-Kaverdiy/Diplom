@@ -46,7 +46,7 @@ public class AuthorizationFilter implements Filter {
         if (AUTHORIZATION_COMMANDS.get(OUT_OF_CONTROL).contains(commandName)) {
             return true;
         }
-        HttpSession session = httpRequest.getSession(false);
+        HttpSession session = httpRequest.getSession();
         if (session == null) {
             return false;
         }

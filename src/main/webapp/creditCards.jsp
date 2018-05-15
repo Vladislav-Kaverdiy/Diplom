@@ -25,7 +25,7 @@
                     <th>Year</th>
                     <th>Bill</th>
                     <th>Balance</th>
-                    <th>Blocked</th>
+                    <th>Adding money</th>
                     <th></th>
                     <th></th>
                 </tr>
@@ -42,19 +42,14 @@
                         <td>${creditCard.bill}</td>
                         <td>${creditCard.balance}</td>
                         <td>
-                         <%--   <c:choose>
-                                <c:when test="${creditCard.blocked}">
-                                    <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-success" >Unblock</a>
-                                </c:when>
-                                <c:otherwise>
-                                    <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-danger" >Block</a>
-                                </c:otherwise>
-                            </c:choose>--%>
-
-
-                                <%--<button type="button" class="btn btn-success">Add money</button>--%>
-                                <a href="servlet.do?command=showChangeBalance&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-success">Add money</a>
-
+                             <c:choose>
+                                 <c:when test="${creditCard.blocked}">
+                                     <button type="button" class="btn btn-danger disabled">Blocked</button>
+                                 </c:when>
+                                 <c:otherwise>
+                                     <a href="servlet.do?command=showChangeBalance&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-success">Add money</a>
+                                 </c:otherwise>
+                             </c:choose>
                         </td>
                         <td> <%--<button type="button" class="btn btn-success">Add money</button>--%>
                             <a href="servlet.do?command=deleteCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-danger">Delete</a></td>

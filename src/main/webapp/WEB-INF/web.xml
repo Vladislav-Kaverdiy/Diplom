@@ -28,7 +28,7 @@
         <filter-class>diploma.com.filters.AuthorizationFilter</filter-class>
         <init-param>
             <param-name>administrator</param-name>
-            <param-value>manageUser editUser block_user manageCreditCardAdmin showManageCreditCardAdmin manageCreditCard deleteUser showEditCreditCard deleteCreditCard blockCreditCard editCreditCard unblockClient blockClientBill createUserPayment unblockClientBill manageCreditCard manageRequest
+            <param-value>manageUser editUser block_user deleteCreditCardAdmin manageCreditCardAdmin showManageCreditCardAdmin manageCreditCard deleteUser showEditCreditCard deleteCreditCard blockCreditCard editCreditCard unblockClient blockClientBill createUserPayment unblockClientBill manageCreditCard manageRequest
                 unblockRequest manageClientBills manageUnblockRequests unblockRequest</param-value>
         </init-param>
         <init-param>
@@ -45,6 +45,23 @@
         <filter-name>AuthorizationFilter</filter-name>
         <servlet-name>DispatcherServlet</servlet-name>
     </filter-mapping>
+
+
+    <filter>
+        <filter-name>CharsetFilter</filter-name>
+        <filter-class>diploma.com.filters.CharsetFilter</filter-class>
+        <init-param>
+            <param-name>requestEncoding</param-name>
+            <param-value>UTF-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CharsetFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+
     <context-param>
         <param-name>javax.servlet.jsp.jstl.fmt.localizationContext</param-name>
         <param-value>resources</param-value>

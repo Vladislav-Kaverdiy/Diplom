@@ -45,17 +45,17 @@
                 <td>
                     <c:choose>
                         <c:when test="${creditCard.blocked}">
-                            <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}"
+                            <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}&userId=${userId}"
                                class="btn btn-success">Unblock</a>
                         </c:when>
                         <c:otherwise>
-                            <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}"
+                            <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}&userId=${userId}"
                                class="btn btn-danger">Block</a>
                         </c:otherwise>
                     </c:choose>
                 </td>
                 <td>
-                    <a href="servlet.do?command=deleteCreditCard&creditCardId=${creditCard.getCreditCardId()}"
+                    <a href="servlet.do?command=deleteCreditCardAdmin&creditCardId=${creditCard.getCreditCardId()}&userId=${userId}"
                        class="btn btn-danger">Delete</a></td>
 
                 </c:forEach>

@@ -33,6 +33,7 @@ public class CommandContainer {
         commands.put(CommandTypes.SHOW_EDIT_CREDIT_CARD, new ShowEditCreditCard());
         commands.put(CommandTypes.MANAGE_CREDIT_CARD_ADMIN, new ManageCreditCardAdmin());
         commands.put(CommandTypes.EDIT_USER, new EditUser());
+        commands.put(CommandTypes.DELETE_CREDIT_CARD_ADMIN, new DeleteCreditCardAdmin());
         commands.put(CommandTypes.SHOW_CHANGE_BALANCE, new ShowChangeBalance());
 
     }
