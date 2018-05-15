@@ -50,6 +50,7 @@ public interface Messages {
 	String ERR_CANNOT_DELETE_CREDIT_CARD = "Cannot delete  credit card ";
 
 	// Manipulate Payments errors
+	String ERR_CANNOT_OBTAIN_USER_PAYMENT_BY_CREDIT_CARD_ID = "Cannot obtain a user payment by credit card id";
 	 String ERR_CANNOT_ADD_USER_PAYMENT = "Cannot insert payment";
 	 String ERR_CANNOT_OBTAIN_PAYMENTS_BY_PAYMENT_STATE_NAME = "Cannot obtain payments by payment state name";
 	 String ERR_CANNOT_ADD_PREPEARED_PAYMENT = "Cannot insert a prepeared payment";
@@ -58,7 +59,8 @@ public interface Messages {
 	 String ERR_CANNOT_UPDATE_PAYMENT_TO_SEND = "Cannot update a payment to sent";
 	 String ERR_CANNOT_OBTAIN_PAYMENTS_BY_USER_ID = "Cannot obtain payments by a user id";
 	 String ERR_CANNOT_DELETE_PREPARED_PAYMENT = "Cannot delete a prepared payment";
-	
+	String ERR_CANNOT_DELETE_USER_PAYMENT = "Cannot delete  user payment ";
+	String ERR_CANNOT_UPDATE_USER_PAYMENT = "Cannot update a user payment";
 	//Application errors
 	 String ERR_CANNOT_CHANGE_LOCALE = "Cannot change locale";
 	 String ERR_CANNOT_GENERATE_TOKEN= "Cannot generate token";

@@ -1,7 +1,8 @@
 package diploma.com.servlets.commands.customer;
 
-import org.apache.log4j.Logger;
 import diploma.com.database.dao.UserPaymentDao;
+import diploma.com.database.daoImpl.UserPaymentImpl;
+import org.apache.log4j.Logger;
 import diploma.com.exception.AppException;
 import diploma.com.exception.Messages;
 import diploma.com.model.CreditCard;
@@ -30,7 +31,7 @@ public class AddPayment implements Command {
 
             LOG.trace("Get request parameters and crete user payment--> "
                     + userPayment.toString());
-            UserPaymentDao userPaymentDao = new UserPaymentDao();
+            UserPaymentImpl userPaymentDao = new UserPaymentImpl();
             userPaymentDao.addUserPayment(userPayment);
 
         } catch (Exception ex) {

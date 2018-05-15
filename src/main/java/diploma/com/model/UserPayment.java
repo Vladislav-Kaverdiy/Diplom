@@ -1,62 +1,54 @@
 package diploma.com.model;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class UserPayment implements Serializable {
-    private int paymentId;
-    private int confirmationDate;
-    private int  creationDate;
-    private int stateId;
-    private int creditCardId;
-    private double sum;
+    private Integer paymentId;
+    private Date creationDate;
+    private boolean state;
+    private Integer creditCardId;
+    private Double sum;
     private String description;
-    private long recipientBill;
+    private Long recipientBill;
 
-    public int getPaymentId() {
+    public Integer getPaymentId() {
         return paymentId;
     }
 
-    public void setPaymentId(int paymentId) {
+    public void setPaymentId(Integer paymentId) {
         this.paymentId = paymentId;
     }
 
-    public int getConfirmationDate() {
-        return confirmationDate;
-    }
-
-    public void setConfirmationDate(int confirmationDate) {
-        this.confirmationDate = confirmationDate;
-    }
-
-    public int getCreationDate() {
+    public Date getCreationDate() {
         return creationDate;
     }
 
-    public void setCreationDate(int creationDate) {
+    public void setCreationDate(Date creationDate) {
         this.creationDate = creationDate;
     }
 
-    public int getStateId() {
-        return stateId;
+    public boolean isState() {
+        return state;
     }
 
-    public void setStateId(int stateId) {
-        this.stateId = stateId;
+    public void setState(boolean state) {
+        this.state = state;
     }
 
-    public int getCreditCardId() {
+    public Integer getCreditCardId() {
         return creditCardId;
     }
 
-    public void setCreditCardId(int creditCardId) {
+    public void setCreditCardId(Integer creditCardId) {
         this.creditCardId = creditCardId;
     }
 
-    public double getSum() {
+    public Double getSum() {
         return sum;
     }
 
-    public void setSum(double sum) {
+    public void setSum(Double sum) {
         this.sum = sum;
     }
 
@@ -68,21 +60,24 @@ public class UserPayment implements Serializable {
         this.description = description;
     }
 
-    public long getRecipientBill() {
+    public Long getRecipientBill() {
         return recipientBill;
     }
 
-    public void setRecipientBill(long recipientBill) {
+    public void setRecipientBill(Long recipientBill) {
         this.recipientBill = recipientBill;
     }
 
     @Override
     public String toString() {
-        return "UserPayment [paymentId=" + paymentId + ", confirmationDate="
-                + confirmationDate + ", creationDate=" + creationDate
-                + ", stateId=" + stateId + ", creditCardId=" + creditCardId
-                + ", sum=" + sum + ", description=" + description + "]";
+        return "UserPaymentDao{" +
+                "paymentId=" + paymentId +
+                ", creationDate=" + creationDate +
+                ", state=" + state +
+                ", creditCardId=" + creditCardId +
+                ", sum=" + sum +
+                ", description='" + description + '\'' +
+                ", recipientBill=" + recipientBill +
+                '}';
     }
-
-
 }

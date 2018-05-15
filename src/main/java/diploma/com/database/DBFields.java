@@ -23,7 +23,7 @@ public class DBFields {
 	public static final String BALANCE = "balance";
 	public static final String CREDIT_CARD_ID = "credit_card_id";
     //payment_states table
-	public static final String STATE_ID = "state_id";
+	public static final String STATE = "state";
 	public static final String STATE_NAME = "state_name";
     //unblock_requests table
 
@@ -32,6 +32,6 @@ public class DBFields {
 	public static final String PAYMENT_ID = "payment_id";
 	public static final String SUM = "sum";
 	public static final String RECIPIENT_BILL = "recipient_bill";
-	public static final String CONFIRMATION_DATE = "confirmation_date";
+
 
 }

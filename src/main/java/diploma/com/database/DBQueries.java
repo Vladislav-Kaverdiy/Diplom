@@ -33,9 +33,20 @@ public interface DBQueries {
 
 
 
-//Queries for UserPayment, UserPaymentDao class
+//Queries for UserPaymentDao, UserPaymentDao class
+String SQL_FIND_USER_PAYMENT_BY_CREDIT_CARD_ID = "SELECT * FROM user_payments WHERE credit_card_id=?";
  String SQL_FIND_ALL_USER_PAYMENTS = "SELECT * FROM user_payments";
- String SQL_INSERT_USER_PAYMENTS = "INSERT INTO user_payments(confirmation_date, creation_date, state_id, credit_card_id, sum, description, recipient_bill)VALUE(?,?,?,?,?,?,?)";
+
+ String SQL_DELETE_USER_PAYMENT_BY_ID = "DELETE FROM user_payments WHERE payment_id=?";
+
+ String SQL_INSERT_USER_PAYMENTS = "INSERT INTO user_payments(creation_date, state, credit_card_id, sum, description, recipient_bill)VALUE(?,?,?,?,?,?)";
+
+ String SQL_UPDATE_USER_PAYMENT = "UPDATE user_payments SET creation_date=?, credit_card_id=?, sum=?, description=?, recipient_bill=?"
+         + " WHERE payment_id=?";
+
+ String SQL_UPDATE_USER_PAYMENT_STATE = "UPDATE user_payments SET state=?"
+         + " WHERE payment_id=?";
+
  String SQL_FIND_USER_PAYMENTS_BY_ID = "SELECT * user_payments WHERE payment_id=?";
  String SQL_UPDATE_USER_PAYMENTS_STATE = "UPDATE user_payments SET blocked=?"
         + "	WHERE payment_id=?";
