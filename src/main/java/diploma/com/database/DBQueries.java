@@ -39,7 +39,7 @@ String SQL_FIND_USER_PAYMENT_BY_CREDIT_CARD_ID = "SELECT * FROM user_payments WH
 
  String SQL_DELETE_USER_PAYMENT_BY_ID = "DELETE FROM user_payments WHERE payment_id=?";
 
- String SQL_INSERT_USER_PAYMENTS = "INSERT INTO user_payments(creation_date, state, credit_card_id, sum, description, recipient_bill)VALUE(?,?,?,?,?,?)";
+ String SQL_INSERT_USER_PAYMENTS = "INSERT INTO user_payments(creation_date, state,  sum, description, recipient_bill, credit_card_id)VALUE(?,?,?,?,?,?)";
 
  String SQL_UPDATE_USER_PAYMENT = "UPDATE user_payments SET creation_date=?, credit_card_id=?, sum=?, description=?, recipient_bill=?"
          + " WHERE payment_id=?";

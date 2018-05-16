@@ -15,30 +15,23 @@
         <div class="col-md-offset-3 col-md-9">
             <h2>Adding new payment</h2>
             <form action="servlet.do" method="post" >
-                <input type="hidden" name="command" value="createUserPayment"/>
-                <div class="form-group">
-                    <label for="confirmationDate">Confirmation Date:</label>
-                    <input name="confirmationDate" type="text" class="form-control" id="confirmationDate" placeholder="Enter date">
-                </div>
-                <div class="form-group">
-                    <label for="creationDate">Creation Date:</label>
-                    <input name="creationDate" type="text" class="form-control" id="creationDate" placeholder="Enter date">
-                </div>
+                <input type="hidden" name="command" value="addPayment"/>
+                <input type="hidden" name="creditCardId" value="${creditCardId}"/>
+
                 <div class="form-group">
                     <label for="sum">Sum:</label>
                     <input  name="sum" type="text" class="form-control" id="sum" placeholder="Enter sum">
                 </div>
                 <div class="form-group">
                     <label for="description">Description:</label>
-                    <input name="description" type="text" class="form-control" id="description" placeholder="Enter escription">
+                    <input name="description" type="text" class="form-control" id="description" placeholder="Enter description">
                 </div>
                 <div class="form-group">
                     <label for="recipientBill">Bill:</label>
-                    <input name="recipientBill" type="text" class="form-control" id="recipientBill" placeholder="Enter bill">
+                    <input name="recipientBill" type="text" class="form-control" id="recipientBill" placeholder="Enter recipientBill">
                 </div>
 
                 <div class="form-group">
-
                      <button type="submit" class="btn btn-primary"><h4>Add payment</h4></button>
                 </div>
 

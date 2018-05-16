@@ -16,25 +16,20 @@
             <table class="table table-bordered">
                 <thead>
                 <tr>
-                    <th>Confirmation Date</th>
-                    <th>Creation Date</th>
+                    <th>Recipient Bill</th>
                     <th>Sum</th>
                     <th>Description</th>
-                    <th>Bill</th>
-
-
+                    <th>Creation Date</th>
                 </tr>
                 </thead>
+
                 <tbody>
-                <c:forEach var="creditCard" items="${creditCards}">
+                <c:forEach var="userPayment" items="${userPayment}">
                     <tr>
-                        <td>${userPayment.confirmationDate}</td>
-                        <td>${userPayment.creationDate}</td>
+                        <td>${userPayment.recipientBill}</td>
                         <td>${userPayment.sum}</td>
                         <td>${userPayment.description}</td>
-                        <td>${userPayment.recipientBill}</td>
-
-
+                        <td>${userPayment.creationDate}</td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -42,7 +37,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-offset-1 col-md-2">
-                        <a href="addPayment.jsp" class="btn btn-success btn-lg">Add new Payment</a>
+                        <a href="servlet.do?command=showAddPayment&creditCardId=${creditCardId}" class="btn btn-success">Add new Payment</a>
+                        <%--<a href="addPayment.jsp" class="btn btn-success btn-lg">Add new Payment</a>--%>
                     </div>
                 </div>
         </div>

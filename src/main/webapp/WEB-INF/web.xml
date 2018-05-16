@@ -34,7 +34,7 @@
         <init-param>
             <param-name>client</param-name>
             <param-value>manageCreditCard createCreditCard showEditCreditCard editCreditCard addMoney deleteCreditCard showChangeBalance createUserPayment addFunds blockCreditCard unblockCreditCard
-                managePayments addPreparedPayment sendPayment statisticPayments savePaymentInPdf reportsPayments redirectReport deletePayment</param-value>
+                managePayments addPayment showAddPayment addPreparedPayment sendPayment statisticPayments savePaymentInPdf reportsPayments redirectReport deletePayment</param-value>
         </init-param>
         <init-param>
             <param-name>out-of-control</param-name>

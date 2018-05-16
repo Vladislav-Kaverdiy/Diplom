@@ -28,7 +28,10 @@ public class ManageCreditCard implements Command {
             CreditCardDaoImpl creditCardDaoImpl = new CreditCardDaoImpl();
             List<CreditCard> creditCards = creditCardDaoImpl.getCreditCardsByUserId(user.getUserId());
             LOG.trace("Get credit cards of user--> " + user.getFullName());
+
             request.setAttribute("creditCards", creditCards);
+            request.setAttribute("creditCardId", request.getParameter("creditCardId"));
+
 
         } catch (Exception ex) {
             LOG.error(Messages.ERR_CANNOT_OBTAIN_CREDIT_CARD_BY_USER_ID, ex);

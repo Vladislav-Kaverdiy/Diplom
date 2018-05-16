@@ -1,6 +1,7 @@
 package diploma.com.servlets.commands;
 
 import diploma.com.servlets.commands.admin.*;
+import diploma.com.servlets.commands.commandsShow.ShowAddPayment;
 import diploma.com.servlets.commands.commandsShow.ShowChangeBalance;
 import diploma.com.servlets.commands.commandsShow.ShowEditCreditCard;
 import diploma.com.servlets.commands.application.ChangeLocaleCommand;
@@ -38,6 +39,8 @@ public class CommandContainer {
         commands.put(CommandTypes.DELETE_CREDIT_CARD_ADMIN, new DeleteCreditCardAdmin());
         commands.put(CommandTypes.SHOW_EDIT_USER, new ShowEditUser());
         commands.put(CommandTypes.SHOW_CHANGE_BALANCE, new ShowChangeBalance());
+        commands.put(CommandTypes.ADD_PAYMENT, new AddPayment());
+        commands.put(CommandTypes.SHOW_ADD_PAYMENT, new ShowAddPayment());
 
     }
 

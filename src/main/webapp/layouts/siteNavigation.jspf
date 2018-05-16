@@ -16,7 +16,7 @@
             <c:choose>
                 <c:when test="${sessionScope.role eq 'client'}">
                     <li class="active"><a href="servlet.do?command=manageCreditCard">Credit cards</a></li>
-                    <li class="active"><a href="userPayment.jsp"><fmt:message key="rs_payments" /> </a></li>
+                  <%--  <li class="active"><a href="userPayment.jsp"><fmt:message key="rs_payments" /> </a></li>--%>
                     <a href="addCreditCard.jsp" class="btn btn-info ">ADD Credit Card</a>
                 </c:when>
                 <c:otherwise>

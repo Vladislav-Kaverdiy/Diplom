@@ -14,6 +14,8 @@ public  enum CommandTypes {
     ADD_MONEY("addMoney"),
     MANAGE_USER("manageUser"),
     MANAGE_REQUEST("manageRequest"),
+    ADD_PAYMENT("addPayment"),
+    SHOW_ADD_PAYMENT("showAddPayment"),
     MANAGE_PAYMENTS("managePayments"),
     CHANGE_LOCALE("changeLocale"),
     BLOCK_USER("block_user"),

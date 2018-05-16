@@ -24,18 +24,22 @@ public class ManagePayments implements Command {
                           HttpServletResponse response) throws IOException, ServletException,
 
             AppException {
+
         try {
             LOG.debug("Command starts");
-            User user = (User) request.getSession(false).getAttribute("user");
-            UserPaymentImpl userPaymentDao = new UserPaymentImpl();
-          //  List<UserPayment> payments = UserPaymentImpl.getUserPaymentByUserId(user.getUserId());
-            LOG.trace("Get payment of user--> " + user.getFullName());
-           // request.setAttribute("userPayment", payments);
+            //User user = (User) request.getSession(false).getAttribute("user");
+            UserPaymentImpl userPaymentImpl = new UserPaymentImpl();
+            Integer creditCardId = Integer.parseInt(request.getParameter("creditCardId"));
+            List<UserPayment> userPayment = userPaymentImpl.getPaymentByCreditCardId(creditCardId);
+
+
+            request.setAttribute("userPayment", userPayment);
+            request.setAttribute("creditCardId", creditCardId);
 
         } catch (Exception ex) {
-            LOG.error(Messages.ERR_CANNOT_OBTAIN_PAYMENTS_BY_USER_ID, ex);
+            LOG.error(Messages.ERR_CANNOT_OBTAIN_PAYMENTS_BY_CREDIT_CARD_ID, ex);
             request.setAttribute("errorMessage",
-                    Messages.ERR_CANNOT_OBTAIN_PAYMENTS_BY_USER_ID);
+                    Messages.ERR_CANNOT_OBTAIN_PAYMENTS_BY_CREDIT_CARD_ID);
             request.setAttribute("exceptionMessage", ex.getMessage());
             return Path.PAGE_ERROR_PAGE;
         }

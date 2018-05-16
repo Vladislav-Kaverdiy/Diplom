@@ -57,7 +57,7 @@ public interface Messages {
 	 String ERR_CANNOT_OBTATIN_PAYMENT_STATE_BY_ID = "Cannot obtain the payment state by payment state id";
 	 String ERR_CANNOT_OBTATIN_PAYMENT_BY_ID = "Cannot obtain the payment by payment id";
 	 String ERR_CANNOT_UPDATE_PAYMENT_TO_SEND = "Cannot update a payment to sent";
-	 String ERR_CANNOT_OBTAIN_PAYMENTS_BY_USER_ID = "Cannot obtain payments by a user id";
+	 String ERR_CANNOT_OBTAIN_PAYMENTS_BY_CREDIT_CARD_ID = "Cannot obtain payments by credit card id";
 	 String ERR_CANNOT_DELETE_PREPARED_PAYMENT = "Cannot delete a prepared payment";
 	String ERR_CANNOT_DELETE_USER_PAYMENT = "Cannot delete  user payment ";
 	String ERR_CANNOT_UPDATE_USER_PAYMENT = "Cannot update a user payment";
