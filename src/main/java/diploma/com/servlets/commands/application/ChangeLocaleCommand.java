@@ -32,6 +32,13 @@ public class ChangeLocaleCommand implements Command {
             LOG.trace("Get locale --> " + requestLocale);
             Locale locale = new Locale(requestLocale);
             Config.set(request.getSession(false), Config.FMT_LOCALE, locale);
+
+            /*HttpSession session = request.getSession();
+            Config.set(session, Config.FMT_LOCALE, locale);
+
+            session.removeAttribute("currentLocale");
+            */
+
             HttpSession session = request.getSession();
             if (session != null) {
                 request.getSession(false).removeAttribute("currentLocale");
