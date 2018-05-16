@@ -41,6 +41,7 @@ public class CommandContainer {
         commands.put(CommandTypes.SHOW_CHANGE_BALANCE, new ShowChangeBalance());
         commands.put(CommandTypes.ADD_PAYMENT, new AddPayment());
         commands.put(CommandTypes.SHOW_ADD_PAYMENT, new ShowAddPayment());
+        commands.put(CommandTypes.DELETE_PAYMENT, new DeletePayment());
 
     }
 

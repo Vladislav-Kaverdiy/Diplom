@@ -20,6 +20,9 @@ public interface DBQueries {
      String SQL_INSERT_CREDIT_CARD = "INSERT INTO credit_cards(bill, credit_card_number, description, month_expiration, year_expiration, cvs, blocked, balance, user_id)VALUE(?,?,?,?,?,?,?,?,?)";
      String SQL_FIND_ALL_CREDIT_CARDS_BY_USER_ID = "SELECT * FROM credit_cards WHERE user_id=?";
      String SQL_FIND_CREDIT_CARD_BY_ID = "SELECT * FROM credit_cards WHERE credit_card_id=?";
+
+ String SQL_FIND_USER_PAYMENTS_BY_ID = "SELECT * FROM user_payments WHERE payment_id=?";
+
      String SQL_UPDATE_CREDIT_CARD_STATE = "UPDATE credit_cards SET blocked=?"
             + " WHERE credit_card_id=?";
 
@@ -47,7 +50,7 @@ String SQL_FIND_USER_PAYMENT_BY_CREDIT_CARD_ID = "SELECT * FROM user_payments WH
  String SQL_UPDATE_USER_PAYMENT_STATE = "UPDATE user_payments SET state=?"
          + " WHERE payment_id=?";
 
- String SQL_FIND_USER_PAYMENTS_BY_ID = "SELECT * user_payments WHERE payment_id=?";
+
  String SQL_UPDATE_USER_PAYMENTS_STATE = "UPDATE user_payments SET blocked=?"
         + "	WHERE payment_id=?";
  String SQL_UPDATE_USER_PAYMENTS = "UPDATE user_payments SET confirmation_date=?, creation_date=?, state_id=?, credit_card_id=?, sum=?, description=?, recipient_bill=?"

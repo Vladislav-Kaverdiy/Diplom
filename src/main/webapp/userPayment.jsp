@@ -30,6 +30,12 @@
                         <td>${userPayment.sum}</td>
                         <td>${userPayment.description}</td>
                         <td>${userPayment.creationDate}</td>
+
+                        <td>
+                            <a href="servlet.do?command=deletePayment&creditCardId=${creditCardId}&paymentId=${userPayment.getPaymentId()}" class="btn btn-danger">Delete</a></td>
+
+                        <td>
+                            <a href="servlet.do?command=showEditCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-info">Edit</a></td>
                     </tr>
                 </c:forEach>
                 </tbody>
@@ -38,7 +44,7 @@
                 <div class="row">
                     <div class="col-md-offset-1 col-md-2">
                         <a href="servlet.do?command=showAddPayment&creditCardId=${creditCardId}" class="btn btn-success">Add new Payment</a>
-                        <%--<a href="addPayment.jsp" class="btn btn-success btn-lg">Add new Payment</a>--%>
+
                     </div>
                 </div>
         </div>
