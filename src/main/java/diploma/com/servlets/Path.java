@@ -14,7 +14,7 @@ public interface Path {
     String PAGE_CLIENT_ERROR_PAGE = "/errorPage.jsp";
     String PAGE_REGISTRATION = "/registration.jsp";
     String LOGIN_PAGE = "/login.jsp";
-    String COMMAND_CLIENT_MANAGE_USER_PAYMENT = "/servlet.do?command=manageUserPayment";
+    String COMMAND_CLIENT_MANAGE_USER_PAYMENT = "/servlet.do?command=managePayments";
     String PAGE_CLIENT_MANAGE_PAYMENT = "/userPayment.jsp";
     String HOME_PAGE = "/home.jsp";
     String SERVLET_USERS_PAGE = "/servlet.do?command=manageUser";
@@ -25,4 +25,5 @@ public interface Path {
     String PAGE_EDIT_CREDIT_CARD= "/editCreditCard.jsp";
     String PAGE_EDIT_USER= "/editUser.jsp";
     String PAGE_ADD_PAYMENT = "/addPayment.jsp";
+    String PAGE_EDIT_PAYMENT = "/editPayment.jsp";
 }

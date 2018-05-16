@@ -35,7 +35,7 @@
                             <a href="servlet.do?command=deletePayment&creditCardId=${creditCardId}&paymentId=${userPayment.getPaymentId()}" class="btn btn-danger">Delete</a></td>
 
                         <td>
-                            <a href="servlet.do?command=showEditCreditCard&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-info">Edit</a></td>
+                            <a href="servlet.do?command=showEditPayment&creditCardId=${creditCardId}&paymentId=${userPayment.getPaymentId()}" class="btn btn-info">Edit</a></td>
                     </tr>
                 </c:forEach>
                 </tbody>

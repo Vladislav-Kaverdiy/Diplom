@@ -44,7 +44,7 @@ String SQL_FIND_USER_PAYMENT_BY_CREDIT_CARD_ID = "SELECT * FROM user_payments WH
 
  String SQL_INSERT_USER_PAYMENTS = "INSERT INTO user_payments(creation_date, state,  sum, description, recipient_bill, credit_card_id)VALUE(?,?,?,?,?,?)";
 
- String SQL_UPDATE_USER_PAYMENT = "UPDATE user_payments SET creation_date=?, credit_card_id=?, sum=?, description=?, recipient_bill=?"
+ String SQL_UPDATE_USER_PAYMENT = "UPDATE user_payments SET creation_date=?, sum=?, description=?, recipient_bill=?"
          + " WHERE payment_id=?";
 
  String SQL_UPDATE_USER_PAYMENT_STATE = "UPDATE user_payments SET state=?"

@@ -96,11 +96,10 @@ public class UserPaymentImpl implements UserPaymentDao {
              PreparedStatement preparedStatement = connection.prepareStatement(DBQueries.SQL_UPDATE_USER_PAYMENT)) {
 
             preparedStatement.setDate(1,new java.sql.Date (userPayment.getCreationDate().getTime()));
-            preparedStatement.setInt(2, userPayment.getCreditCardId());
-            preparedStatement.setDouble(3, userPayment.getSum());
-            preparedStatement.setString(4, userPayment.getDescription());
-            preparedStatement.setLong(5, userPayment.getRecipientBill());
-            preparedStatement.setInt(6, userPayment.getPaymentId());
+            preparedStatement.setDouble(2, userPayment.getSum());
+            preparedStatement.setString(3, userPayment.getDescription());
+            preparedStatement.setLong(4, userPayment.getRecipientBill());
+            preparedStatement.setInt(5, userPayment.getPaymentId());
             preparedStatement.executeUpdate();
             LOG.error(Messages.ERR_CANNOT_UPDATE_USER_PAYMENT);
         }

@@ -33,7 +33,7 @@
         </init-param>
         <init-param>
             <param-name>client</param-name>
-            <param-value>manageCreditCard deletePayment createCreditCard showEditCreditCard editCreditCard addMoney deleteCreditCard showChangeBalance createUserPayment addFunds blockCreditCard unblockCreditCard
+            <param-value>manageCreditCard deletePayment showEditPayment editPayment createCreditCard showEditCreditCard editCreditCard addMoney deleteCreditCard showChangeBalance createUserPayment addFunds blockCreditCard unblockCreditCard
                 managePayments addPayment showAddPayment addPreparedPayment sendPayment statisticPayments savePaymentInPdf reportsPayments redirectReport deletePayment</param-value>
         </init-param>
         <init-param>
