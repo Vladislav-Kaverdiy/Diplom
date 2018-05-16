@@ -58,6 +58,10 @@
                     <a href="servlet.do?command=deleteCreditCardAdmin&creditCardId=${creditCard.getCreditCardId()}&userId=${userId}"
                        class="btn btn-danger">Delete</a></td>
 
+                <td> <%--<button type="button" class="btn btn-success">Add money</button>--%>
+                    <a href="servlet.do?command=managePaymentAdmin&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-info">Show payments</a></td>
+            </tr>
+
                 </c:forEach>
             </tbody
         </table>

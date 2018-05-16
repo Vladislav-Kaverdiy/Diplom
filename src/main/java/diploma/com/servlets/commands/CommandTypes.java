@@ -17,9 +17,11 @@ public  enum CommandTypes {
     ADD_PAYMENT("addPayment"),
     SHOW_ADD_PAYMENT("showAddPayment"),
     MANAGE_PAYMENTS("managePayments"),
-
     SHOW_EDIT_PAYMENT("showEditPayment"),
     EDIT_PAYMENT("editPayment"),
+
+    DELETE_PAYMENT_ADMIN("deletePaymentAdmin"),
+    MANAGE_PAYMENT_ADMIN("managePaymentAdmin"),
 
     DELETE_PAYMENT("deletePayment"),
     CHANGE_LOCALE("changeLocale"),

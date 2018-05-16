@@ -16,6 +16,7 @@ public interface Path {
     String LOGIN_PAGE = "/login.jsp";
     String COMMAND_CLIENT_MANAGE_USER_PAYMENT = "/servlet.do?command=managePayments";
     String PAGE_CLIENT_MANAGE_PAYMENT = "/userPayment.jsp";
+    String PAGE_ADMIN_MANAGE_PAYMENT = "/userPaymentAdmin.jsp";
     String HOME_PAGE = "/home.jsp";
     String SERVLET_USERS_PAGE = "/servlet.do?command=manageUser";
     String USERS_PAGE = "/users.jsp";

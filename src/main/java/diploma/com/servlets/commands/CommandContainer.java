@@ -41,6 +41,8 @@ public class CommandContainer {
         commands.put(CommandTypes.DELETE_PAYMENT, new DeletePayment());
         commands.put(CommandTypes.SHOW_EDIT_PAYMENT, new ShowEditPayment());
         commands.put(CommandTypes.EDIT_PAYMENT, new EditPayment());
+        commands.put(CommandTypes.DELETE_PAYMENT_ADMIN, new DeletePaymentAdmin());
+        commands.put(CommandTypes.MANAGE_PAYMENT_ADMIN, new ManageUserPaymentAdmin());
 
     }
 
