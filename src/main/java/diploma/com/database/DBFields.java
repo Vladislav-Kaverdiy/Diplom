@@ -1,7 +1,7 @@
 package diploma.com.database;
 
 public class DBFields {
-	
+
 	//users table
 	public static final String USER_ID = "user_id";
 	public static final String USER_FULL_NAME = "full_name";
