@@ -11,7 +11,7 @@ public class DBFields {
 	public static final String REGISTER_DATE = "register_date";
 	public static final String ROLE_ID = "role_id";
 	public static final String ROLE_NAME = "role_name";
-	
+	//
 	//credit_cards table
 	public static final String BILL = "bill";
 	public static final String CREDIT_CARD_NUMBER = "credit_card_number";
