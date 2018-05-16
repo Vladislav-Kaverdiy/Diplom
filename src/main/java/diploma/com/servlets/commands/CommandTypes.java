@@ -19,10 +19,8 @@ public  enum CommandTypes {
     MANAGE_PAYMENTS("managePayments"),
     SHOW_EDIT_PAYMENT("showEditPayment"),
     EDIT_PAYMENT("editPayment"),
-
     DELETE_PAYMENT_ADMIN("deletePaymentAdmin"),
     MANAGE_PAYMENT_ADMIN("managePaymentAdmin"),
-
     DELETE_PAYMENT("deletePayment"),
     CHANGE_LOCALE("changeLocale"),
     BLOCK_USER("block_user"),
@@ -36,6 +34,9 @@ public  enum CommandTypes {
     SHOW_EDIT_CREDIT_CARD("showEditCreditCard"),
     EDIT_USER("editUser"),
     SHOW_EDIT_USER("showEditUser"),
+
+    CHANGE_STATE_PAYMENT("changeStatePayment"),
+
     DELETE_CREDIT_CARD_ADMIN("deleteCreditCardAdmin"),
     LOGOUT("logout");
 

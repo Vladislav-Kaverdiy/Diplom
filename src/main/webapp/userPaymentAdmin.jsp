@@ -37,12 +37,12 @@
                     <td>
                         <c:choose>
                             <c:when test="${userPayment.state}">
-                                <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}&userId=${userId}"
+                                <a href="servlet.do?command=changeStatePayment&creditCardId=${creditCardId}&paymentId=${userPayment.getPaymentId()}"
                                    class="btn btn-success">Sent</a>
                             </c:when>
                             <c:otherwise>
-                                <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}&userId=${userId}"
-                                   class="btn btn-danger">Prepared</a>
+                                <a href="servlet.do?command=changeStatePayment&creditCardId=${creditCardId}&paymentId=${userPayment.getPaymentId()}"
+                                   class="btn btn-warning">Prepared</a>
                             </c:otherwise>
                         </c:choose>
                     </td>
