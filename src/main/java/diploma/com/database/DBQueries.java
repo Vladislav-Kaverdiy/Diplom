@@ -12,8 +12,6 @@ public interface DBQueries {
             + "	WHERE user_id=?";
     String SQL_UPDATE_USER = "UPDATE users SET full_name=?, email=?, login=?, register_date=?"
             + "	WHERE user_id=?";
-
-
     String SQL_DELETE_USER_BY_ID = "DELETE FROM users WHERE user_id=?";
 
     //Queries for CreditCard, CreditCardDaoImpl class
@@ -37,7 +35,6 @@ public interface DBQueries {
 
     //Queries for UserPaymentDaoImpl, UserPaymentDao class
     String SQL_FIND_USER_PAYMENT_BY_CREDIT_CARD_ID = "SELECT * FROM user_payments WHERE credit_card_id=?";
-
 
     String SQL_DELETE_USER_PAYMENT_BY_ID = "DELETE FROM user_payments WHERE payment_id=?";
 

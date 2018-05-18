@@ -1,10 +1,9 @@
 package diploma.com.servlets;
-
-import diploma.com.exception.AppException;
 import diploma.com.servlets.commands.Command;
 import diploma.com.servlets.commands.CommandContainer;
 
 import javax.servlet.ServletException;
+
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,29 +17,9 @@ import diploma.com.servlets.commands.CommandTypes;
 public class DispatcherServlet extends HttpServlet {
     private static final Logger LOG = Logger.getLogger(DispatcherServlet.class);
 
-    @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        try {
-            process(request, response);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-    }
-
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
-        try {
-            process(request, response);
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-
-    }
-
-    private void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException, SQLException {
+    public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         LOG.debug("Controller starts");
 
         // extract command name from the request
@@ -55,7 +34,7 @@ public class DispatcherServlet extends HttpServlet {
         String forward = "error";
         try {
             forward = command.execute(request, response);
-        } catch (AppException ex) {
+        } catch (SQLException ex) {
             throw new RuntimeException(ex.getMessage());
             //request.setAttribute("errorMessage", ex.getMessage());
         }
@@ -66,8 +45,5 @@ public class DispatcherServlet extends HttpServlet {
         if (!response.isCommitted()) {
             request.getRequestDispatcher(forward).forward(request, response);
         }
-
-
     }
-
 }
