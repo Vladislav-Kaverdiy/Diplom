@@ -1,31 +1,21 @@
 package diploma.com.service;
 
-import diploma.com.database.DBManager;
-import diploma.com.exception.DBException;
 import diploma.com.model.UserPayment;
 
-import java.sql.Connection;
+import java.sql.SQLException;
+import java.util.List;
 
-/**
- * Created by Student on 29.11.2017.
- */
-public class PaymentService {
-    public void createPayment(UserPayment userPayment) throws DBException {
+public interface PaymentService {
 
-        Connection connection = DBManager.getInstance().getConnection();
+    List<UserPayment> getPaymentByCreditCardId(Integer creditCardId) throws SQLException;
 
-/*
-        try {
-            CreditCardDaoImpl creditCardDao = new CreditCardDaoImpl();
-            UserPaymentDao userPaymentDao = new UserPaymentDao();
-            CreditCard creditCard = creditCardDao.getCreditCardsById(connection);
-            creditCard.setBalance(creditCard.getBalance()- userPayment.getSum());
-            creditCardDao.updateCreditCard(creditCard, connection);
-            userPaymentDao.addUserPayment(userPayment, connection);
-            connection.commit();
-        } catch (SQLException e) {
-            connection.rollback();
-            e.printStackTrace();
-        }*/
-    }
+    void addUserPayment(UserPayment userPayment) throws SQLException;
+
+    UserPayment findUserPaymentById(Integer paymentId) throws SQLException;
+
+    void deleteUserPaymentById(Integer paymentId) throws SQLException;
+
+    void updateUserPayment(UserPayment userPayment) throws SQLException;
+
+    void updateUserPaymentState(boolean state, Integer paymentId) throws SQLException;
 }

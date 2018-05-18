@@ -12,8 +12,6 @@ public interface UserPaymentDao {
 
      void addUserPayment(UserPayment userPayment) throws SQLException;
 
-     UserPayment extractUserPayment(ResultSet rs) throws SQLException;
-
      UserPayment findUserPaymentById(Integer paymentId) throws SQLException;
 
      void deleteUserPaymentById(Integer paymentId) throws SQLException;
@@ -21,4 +19,6 @@ public interface UserPaymentDao {
      void updateUserPayment(UserPayment userPayment) throws SQLException;
 
      void updateUserPaymentState(boolean state, Integer paymentId) throws SQLException;
+
+     UserPayment extractUserPayment(ResultSet rs) throws SQLException;
 }

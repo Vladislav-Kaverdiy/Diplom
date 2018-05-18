@@ -1,6 +1,8 @@
 package diploma.com.servlets.commands;
 
 import diploma.com.database.daoImpl.UserDaoImpl;
+import diploma.com.service.UserService;
+import diploma.com.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
 import diploma.com.database.Role;
 import diploma.com.exception.Messages;
@@ -18,6 +20,8 @@ import java.util.List;
 
 public class Registration implements Command {
 
+    private UserService userService = new UserServiceImpl();
+
     private static final Logger LOG = Logger.getLogger(Registration.class);
     @Override
     public String execute(HttpServletRequest request, HttpServletResponse response) {
@@ -32,8 +36,10 @@ public class Registration implements Command {
             }
             String login = request.getParameter("login");
             LOG.trace("Request parameter: loging --> " + login);
-            UserDaoImpl userDaoImpl = new UserDaoImpl();
-            User user = userDaoImpl.findUserByLogin(login);
+
+           // UserDaoImpl userDaoImpl = new UserDaoImpl();
+
+            User user = userService.findUserByLogin(login);
 
             /////////// Check writing to database
 
@@ -52,12 +58,12 @@ public class Registration implements Command {
                    .getParameter("password")));
             LOG.info("User " + user + " logged as "
                     + Role.CLIENT.getName().toLowerCase());
-            user.setRoleId(userDaoImpl
+            user.setRoleId(userService
                     .findRoleByRoleName(Role.CLIENT.getName()).getRoleId());
             user.setRegisterDate(new Date());
             user.setBlocked(false);
-            userDaoImpl.createUser(user);
-            user = userDaoImpl.findUserByLogin(user.getLogin());
+            userService.createUser(user);
+            user = userService.findUserByLogin(user.getLogin());
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
             session.setAttribute("role", Role.CLIENT.getName());
