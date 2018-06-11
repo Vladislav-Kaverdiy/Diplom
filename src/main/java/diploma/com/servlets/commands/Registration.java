@@ -1,6 +1,5 @@
 package diploma.com.servlets.commands;
 
-import diploma.com.database.daoImpl.UserDaoImpl;
 import diploma.com.service.UserService;
 import diploma.com.service.impl.UserServiceImpl;
 import org.apache.log4j.Logger;
@@ -37,7 +36,6 @@ public class Registration implements Command {
             String login = request.getParameter("login");
             LOG.trace("Request parameter: loging --> " + login);
 
-           // UserDaoImpl userDaoImpl = new UserDaoImpl();
 
             User user = userService.findUserByLogin(login);
 

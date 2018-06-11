@@ -1,6 +1,12 @@
     <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
         <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <%@ include file="layouts/siteHeader.jspf"%>
+
+    <%--<link rel="stylesheet" href="styles/templatesstyles/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="styles/templatesstyles/bootstrap-theme.min.css" type="text/css">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">--%>
+
         <%@ include file="layouts/siteNavigation.jspf"%>
 
 <section id="main-slider" class="no-margin">
@@ -11,9 +17,8 @@
                     <div class="row slide-margin">
                         <div class="col-sm-6">
                             <div class="carousel-content">
-                                <h2 class="animation animated-item-1">Welcome to <span>Our Banking Company</span></h2>
-                                <p class="animation animated-item-2">We're here to help you manage your money today and
-                                    tomorrow...</p>
+                                <h2 class="animation animated-item-1"><fmt:message key="rs_welcome_to" /> <span><fmt:message key="rs_our_banking_company" /> </span></h2>
+                                <p class="animation animated-item-2"><fmt:message key="rs_here_to_help" /></p>
                             </div>
                         </div>
 
@@ -49,5 +54,7 @@
         </div>
     </div>
 </section>
+   <%-- <script src="scripts/templatesscripts/jquery-3.2.1.min.js"></script>
+    <script src="scripts/templatesscripts/bootstrap.min.js"></script>--%>
 
         <%@ include file="layouts/siteFooter.jspf"%>

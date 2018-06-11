@@ -7,7 +7,7 @@ import diploma.com.exception.Messages;
 import diploma.com.model.User;
 import diploma.com.servlets.Path;
 import diploma.com.servlets.helper.ConvertPassword;
-import diploma.com.servlets.validators.Validator;
+import diploma.com.servlets.validators.LoginValidator;
 
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,7 +30,7 @@ public class Login implements Command {
 
 
             LOG.debug("Command starts");
-            List<String> errors = Validator.getLoginErrors(request);
+            List<String> errors = LoginValidator.getLoginErrors(request);
             if (errors.size() > 0) {
                 setValidateParameters(request);
                 request.setAttribute("errors", errors);

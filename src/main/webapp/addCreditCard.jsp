@@ -14,12 +14,21 @@
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 col-md-9">
+            <c:if test= "${not empty errors}">
+                <c:forEach var="error" items="${errors}">
+                    <div class="alert alert-danger">
+                            ${error}
+                    </div>
+                </c:forEach>
+            </c:if>
+        </div>
+        <div class="col-md-offset-3 col-md-9">
             <h2>Adding new credit card</h2>
             <form action="servlet.do" method="post" >
                 <input type="hidden" name="command" value="createCreditCard"/>
                 <div class="form-group">
-                    <label for="number">Number:</label>
-                    <input name="creditcardNumber" type="text" class="form-control" id="number" placeholder="Enter number">
+                    <label for="creditcardNumber">Number:</label>
+                    <input name="creditcardNumber" type="text" class="form-control" id="creditcardNumber" placeholder="Enter number">
                 </div>
                 <div class="form-group">
                     <label for="login">cMonth:</label>
