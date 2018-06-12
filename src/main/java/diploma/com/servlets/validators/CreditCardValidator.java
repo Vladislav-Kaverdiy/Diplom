@@ -26,6 +26,59 @@ public class CreditCardValidator {
             errors.add("Your Credit Card Number  is invalid!");
         }
 
+        /////////////////credit card Month////////////////////////////////////////
+
+        String creditcardMonth = request.getParameter("creditcardMonth");
+        String checkMonth = "[0-9]{1,2}";
+        pattern = Pattern.compile(checkMonth);
+        matcher = pattern.matcher(creditcardMonth);
+        if (creditcardMonth == null || creditcardMonth.isEmpty()) {
+            errors.add("Month cannot be empty!");
+        } else if (!matcher.matches()) {
+            errors.add("Your Month  is invalid!");
+        }
+        /////////////////credit card Year ////////////////////////////////////////
+
+        String creditcardYear = request.getParameter("creditcardYear");
+        String checkYear = "[0-9]{4}";
+        pattern = Pattern.compile(checkYear);
+        matcher = pattern.matcher(creditcardYear);
+        if (creditcardYear == null || creditcardYear.isEmpty()) {
+            errors.add("Year cannot be empty!");
+        } else if (!matcher.matches()) {
+            errors.add("Your Year  is invalid!");
+        }
+
+        /////////////////credit card CVS ////////////////////////////////////////
+
+        String creditcardCVS = request.getParameter("creditcardCVS");
+        String checkCVS = "[0-9]{3}";
+        pattern = Pattern.compile(checkCVS);
+        matcher = pattern.matcher(creditcardCVS);
+        if (creditcardCVS == null || creditcardCVS.isEmpty()) {
+            errors.add("CVS cannot be empty!");
+        } else if (!matcher.matches()) {
+            errors.add("Your CVS  is invalid!");
+        }
+
+        /////////////////Balance ////////////////////////////////////////
+
+        String balance = request.getParameter("balance");
+        matcher = pattern.matcher(balance);
+        if (balance == null || balance.isEmpty()) {
+            errors.add("Balance cannot be empty!");
+        }
+        /////////////////Description ////////////////////////////////////////
+
+        String description = request.getParameter("description");
+        String checkDescription = "^[a-zA-Z0-9_-]{3,15}$";
+        pattern = Pattern.compile(checkDescription);
+        matcher = pattern.matcher(description);
+        if (description == null || description.isEmpty()) {
+            errors.add("Description cannot be empty!");
+        } else if (!matcher.matches()) {
+            errors.add("Your Description  is invalid!");
+        }
         return  errors;
     }
 }

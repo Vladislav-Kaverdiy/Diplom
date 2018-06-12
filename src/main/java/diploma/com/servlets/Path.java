@@ -20,4 +20,5 @@ public interface Path {
     String PAGE_EDIT_USER= "/editUser.jsp";
     String PAGE_ADD_PAYMENT = "/addPayment.jsp";
     String PAGE_EDIT_PAYMENT = "/editPayment.jsp";
+    String PAGE_CREATE_CREDIT_CARD = "/addCreditCard.jsp";
 }

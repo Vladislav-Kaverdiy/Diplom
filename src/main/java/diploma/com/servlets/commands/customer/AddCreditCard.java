@@ -33,7 +33,7 @@ public class AddCreditCard implements Command {
             if (errors.size() != 0) {
                 setValidateParameters(request);
                 request.setAttribute("errors", errors);
-                return Path.COMMAND_CLIENT_MANAGE_CREDIT_CARD;
+                return Path.PAGE_CREATE_CREDIT_CARD;
             }else {
                 CreditCard creditCard = new CreditCard();
                 CreditCardHelper creditCardHelper = new CreditCardHelper();
