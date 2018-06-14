@@ -13,17 +13,17 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-offset-2 col-md-8">
+        <div class="col-md-offset-1 col-md-8">
             <table class="table table-striped text-info">
                 <thead>
                 <tr>
-                    <th>Login</th>
-                    <th>Name</th>
-                    <th>E-mail</th>
-                    <th>Registration date</th>
+                    <th><fmt:message key="rs_log" /></th>
+                    <th><fmt:message key="rs_name" /></th>
+                    <th><fmt:message key="rs_email" /></th>
+                    <th><fmt:message key="rs_registration_date" /></th>
                     <th></th>
-                    <th>Block/unblock bill</th>
-                    <th>Credit Cards</th>
+                    <th><fmt:message key="rs_block_and_unblock" /></th>
+                    <th><fmt:message key="rs_credit_cards" /></th>
 
                 </thead>
                 <tbody>
@@ -37,19 +37,17 @@
                         <td>
                             <c:choose>
                             <c:when test="${user.blocked}">
-                            <a class="btn btn-success" href="servlet.do?command=block_user&userId=${user.userId}">Unblock
-                                Block client bill</a>
+                            <a class="btn btn-success" href="servlet.do?command=block_user&userId=${user.userId}"><fmt:message key="rs_unblock_client" /></a>
                             </c:when>
                             <c:otherwise>
-                            <a class="btn btn-danger" href="servlet.do?command=block_user&userId=${user.userId}">Block
-                                client bill</a>
+                            <a class="btn btn-danger" href="servlet.do?command=block_user&userId=${user.userId}"><fmt:message key="rs_block_client" /></a>
                             </c:otherwise>
                             </c:choose>
-                        <td><a class="btn btn-primary" href="servlet.do?command=manageCreditCardAdmin&userId=${user.getUserId()}"> Show Credit Cards</a></td>
+                        <td><a class="btn btn-primary" href="servlet.do?command=manageCreditCardAdmin&userId=${user.getUserId()}"><fmt:message key="rs_show_credit_cards" /></a></td>
 
-                        <td><a class="btn btn-primary" href="servlet.do?command=showEditUser&userId=${user.userId}">Edit User</a></td>
+                        <td><a class="btn btn-primary" href="servlet.do?command=showEditUser&userId=${user.userId}"><fmt:message key="rs_edit_user" /></a></td>
                         <td><a class="btn btn-primary"
-                               href="servlet.do?command=deleteUser&userId=${user.userId}">Delete</a></td>
+                               href="servlet.do?command=deleteUser&userId=${user.userId}"><fmt:message key="rs_delete" /></a></td>
 
                         </td>
                     </tr>

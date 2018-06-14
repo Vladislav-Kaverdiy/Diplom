@@ -2,12 +2,11 @@
         <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <%@ include file="layouts/siteHeader.jspf"%>
 
-    <%--<link rel="stylesheet" href="styles/templatesstyles/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="styles/templatesstyles/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="styles/templatesstyles/bootstrap-theme.min.css" type="text/css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">--%>
-
-        <%@ include file="layouts/siteNavigation.jspf"%>
+       <%@ include file="layouts/siteNavigation.jspf"%>
 
 <section id="main-slider" class="no-margin">
     <div class="carousel slide">
@@ -45,9 +44,7 @@
                     </div>
                     <div class="media-body">
                         <h2><fmt:message key="rs_have_a_question_or_need_a_custom_quote" /></h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                            labore dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation +0123 456 70
-                            80</p>
+                        <p><fmt:message key="rs_call_technical_suport" /></p>
                     </div>
                 </div>
             </div>

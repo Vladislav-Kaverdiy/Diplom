@@ -14,7 +14,7 @@
     <div class="row">
 
         <div class="col-md-offset-3 col-md-9">
-            <h2>Edit</h2>
+            <h2><fmt:message key="rs_edit_user" /></h2>
             <form action="servlet.do" method="post" >
                 <input type="hidden" name="command" value="editUser"/>
 
@@ -22,20 +22,20 @@
                 <input type="hidden" name="creditCardId" value="${creditCardId}"/>
 
                 <div class="form-group">
-                    <label for="usr">Name:</label>
-                    <input name="userName" type="text" class="form-control" id="usr" placeholder="Enter name"  value="${user.getFullName()}">
+                    <label for="usr"><fmt:message key="rs_name" /></label>
+                    <input name="userName" type="text" class="form-control" id="usr" placeholder="<fmt:message key="rs_enter_name" />">
                 </div>
                 <div class="form-group">
-                    <label for="login">Login:</label>
-                    <input name="login" type="text" class="form-control" id="login" placeholder="Enter login"  value="${user.login}">
+                    <label for="login"><fmt:message key="rs_log" /></label>
+                    <input name="login" type="text" class="form-control" id="login" placeholder="<fmt:message key="rs_enter_log" />">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input  name="email" type="text" class="form-control" id="email" placeholder="Enter email"  value="${email}">
+                    <label for="email"><fmt:message key="rs_email" /></label>
+                    <input name="email" type="text" class="form-control" id="email" placeholder="<fmt:message key="rs_enter_email" />">
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-block"><h4>EDIT</h4></button>
+                    <button type="submit" class="btn btn-success btn-block"><h4><fmt:message key="rs_edit" /></h4></button>
                 </div>
 
             </form>

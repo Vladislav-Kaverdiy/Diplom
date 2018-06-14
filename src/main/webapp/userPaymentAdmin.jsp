@@ -16,10 +16,10 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Recipient Bill</th>
-                <th>Sum</th>
-                <th>Description</th>
-                <th>Creation Date</th>
+                <th><fmt:message key="rs_resipient_bill" /></th>
+                <th><fmt:message key="rs_suma" /></th>
+                <th><fmt:message key="rs_description" /></th>
+                <th><fmt:message key="rs_registration_date" /></th>
             </tr>
             </thead>
 
@@ -32,17 +32,17 @@
                     <td>${userPayment.creationDate}</td>
 
                     <td>
-                        <a href="servlet.do?command=deletePaymentAdmin&creditCardId=${creditCardId}&paymentId=${userPayment.getPaymentId()}" class="btn btn-danger">Delete</a></td>
+                        <a href="servlet.do?command=deletePaymentAdmin&creditCardId=${creditCardId}&paymentId=${userPayment.getPaymentId()}" class="btn btn-danger"><fmt:message key="rs_delete" /></a></td>
 
                     <td>
                         <c:choose>
                             <c:when test="${userPayment.state}">
                                 <a href="servlet.do?command=changeStatePayment&creditCardId=${creditCardId}&paymentId=${userPayment.getPaymentId()}"
-                                   class="btn btn-success">Sent</a>
+                                   class="btn btn-success"><fmt:message key="rs_sent" /></a>
                             </c:when>
                             <c:otherwise>
                                 <a href="servlet.do?command=changeStatePayment&creditCardId=${creditCardId}&paymentId=${userPayment.getPaymentId()}"
-                                   class="btn btn-warning">Prepared</a>
+                                   class="btn btn-warning"><fmt:message key="rs_prepared" /></a>
                             </c:otherwise>
                         </c:choose>
                     </td>

@@ -22,27 +22,27 @@
             </c:if>
         </div>
         <div class="col-md-offset-3 col-md-9">
-            <h2>Register</h2>
+            <h2><fmt:message key="rs_registration" /></h2>
             <form action="servlet.do" method="post">
                 <input type="hidden" name="command" value="registration"/>
                 <div class="form-group">
-                    <label for="usr">Name:</label>
-                    <input name="userName" type="text" class="form-control" id="usr" placeholder="Enter name">
+                    <label for="usr"><fmt:message key="rs_name" /></label>
+                    <input name="userName" type="text" class="form-control" id="usr" placeholder="<fmt:message key="rs_enter_name" />">
                 </div>
                 <div class="form-group">
-                    <label for="login">Login:</label>
-                    <input name="login" type="text" class="form-control" id="login" placeholder="Enter login">
+                    <label for="login"><fmt:message key="rs_log" /></label>
+                    <input name="login" type="text" class="form-control" id="login" placeholder="<fmt:message key="rs_enter_log" />">
                 </div>
                 <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input name="email" type="text" class="form-control" id="email" placeholder="Enter email">
+                    <label for="email"><fmt:message key="rs_email" /></label>
+                    <input name="email" type="text" class="form-control" id="email" placeholder="<fmt:message key="rs_enter_email" />">
                 </div>
                 <div class="form-group">
-                    <label for="pwd">Password:</label>
-                    <input name="password" type="password" class="form-control" id="pwd" placeholder="Enter password">
+                    <label for="pwd"><fmt:message key="rs_password" /></label>
+                    <input name="password" type="password" class="form-control" id="pwd" placeholder="<fmt:message key="rs_enter_password" />">
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-block"><h4>Register</h4></button>
+                    <button type="submit" class="btn btn-success btn-block"><h4><fmt:message key="rs_registers" /></h4></button>
                 </div>
 
             </form>

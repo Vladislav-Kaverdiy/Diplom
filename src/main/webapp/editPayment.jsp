@@ -13,27 +13,27 @@
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 col-md-9">
-            <h2>Edit payment</h2>
+            <h2><fmt:message key="rs_edit_payment" /></h2>
             <form action="servlet.do" method="post" >
                 <input type="hidden" name="command" value="editPayment"/>
                 <input type="hidden" name="creditCardId" value="${creditCardId}"/>
                 <input type="hidden" name="paymentId" value="${paymentId}"/>
 
                 <div class="form-group">
-                    <label for="sum">Sum:</label>
-                    <input  name="sum" type="text" class="form-control" id="sum" placeholder="Enter sum">
+                    <label for="sum"><fmt:message key="rs_suma" /></label>
+                    <input  name="sum" type="text" class="form-control" id="sum" placeholder="<fmt:message key="rs_enter_suma" />">
                 </div>
                 <div class="form-group">
-                    <label for="description">Description:</label>
-                    <input name="description" type="text" class="form-control" id="description" placeholder="Enter description">
+                    <label for="description"><fmt:message key="rs_description" /></label>
+                    <input name="description" type="text" class="form-control" id="description" placeholder="<fmt:message key="rs_enter_description" />">
                 </div>
                 <div class="form-group">
-                    <label for="recipientBill">Bill:</label>
-                    <input name="recipientBill" type="text" class="form-control" id="recipientBill" placeholder="Enter recipientBill">
+                    <label for="recipientBill"><fmt:message key="rs_resipient_bill" /></label>
+                    <input name="recipientBill" type="text" class="form-control" id="recipientBill" placeholder="<fmt:message key="rs_enter_recipient_bill" />">
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary"><h4>Edit</h4></button>
+                    <button type="submit" class="btn btn-primary"><h4><fmt:message key="rs_edit" /></h4></button>
                 </div>
 
             </form>

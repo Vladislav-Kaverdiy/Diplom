@@ -23,36 +23,36 @@
             </c:if>
         </div>
         <div class="col-md-offset-3 col-md-9">
-            <h2>Adding new credit card</h2>
+            <h2><fmt:message key="rs_title_add_card" /></h2>
             <form action="servlet.do" method="post" >
                 <input type="hidden" name="command" value="createCreditCard"/>
                 <div class="form-group">
-                    <label for="creditcardNumber">Number:</label>
-                    <input name="creditcardNumber" type="text" class="form-control" id="creditcardNumber" placeholder="Enter number">
+                    <label for="creditcardNumber"> <fmt:message key="rs_number" /></label>
+                    <input name="creditcardNumber" type="text" class="form-control" id="creditcardNumber" placeholder= "<fmt:message key="rs_numb" />">
                 </div>
                 <div class="form-group">
-                    <label for="login">cMonth:</label>
-                    <input name="creditcardMonth" type="text" class="form-control" id="login" placeholder="Enter month">
+                    <label for="login"><fmt:message key="rs_month" /></label>
+                    <input name="creditcardMonth" type="text" class="form-control" id="login" placeholder="<fmt:message key="rs_enter_month" />">
                 </div>
                 <div class="form-group">
-                    <label for="email">Year:</label>
-                    <input  name="creditcardYear" type="text" class="form-control" id="email" placeholder="Enter year">
+                    <label for="email"><fmt:message key="rs_year" /></label>
+                    <input  name="creditcardYear" type="text" class="form-control" id="email" placeholder="<fmt:message key="rs_enter_year" />">
                 </div>
                 <div class="form-group">
-                    <label for="cvc">CVS:</label>
-                    <input name="creditcardCVS" type="text" class="form-control" id="cvc" placeholder="Enter CVS">
+                    <label for="cvc">CVV:</label>
+                    <input name="creditcardCVS" type="text" class="form-control" id="cvc" placeholder="<fmt:message key="rs_enter" />">
                 </div>
                 <div class="form-group">
-                    <label for="bill">Balance:</label>
-                    <input name="balance" type="text" class="form-control" id="bill" placeholder="Enter bill">
+                    <label for="bill"><fmt:message key="rs_bill" /></label>
+                    <input name="balance" type="text" class="form-control" id="bill" placeholder="<fmt:message key="rs_enter_bill" />">
                 </div>
                 <div class="form-group">
-                    <label for="description">Description:</label>
-                    <input name="description" type="text" class="form-control" id="description" placeholder="Enter description">
+                    <label for="description"><fmt:message key="rs_description" /></label>
+                    <input name="description" type="text" class="form-control" id="description" placeholder="<fmt:message key="rs_enter_description" />">
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" class="btn btn-success btn-block"><h4>Add card</h4></button>
+                    <button type="submit" class="btn btn-success btn-block"><h4><fmt:message key="rs_add_credit_card" /></h4></button>
                 </div>
 
             </form>

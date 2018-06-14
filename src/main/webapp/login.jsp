@@ -22,21 +22,20 @@
                 </c:forEach>
             </c:if>
             <div class="col-md-offset-1 col-md-6">
-                <h2>Please login</h2>
+                <h2><fmt:message key="rs_log_in" /></h2>
                 <form action="servlet.do" method="post">
                     <input type="hidden" name="command" value="login"/>
                     <div class="form-group">
-                        <label for="login" class="color-input-field">Login:</label>
-                        <input name="login" type="text" class="form-control" id="login" placeholder="Enter login">
+                        <label for="login" class="color-input-field"><fmt:message key="rs_log" /></label>
+                        <input name="login" type="text" class="form-control" id="login" placeholder="<fmt:message key="rs_enter_log" />">
                     </div>
                     <div class="form-group">
-                        <label for="password">Password:</label>
+                        <label for="password"><fmt:message key="rs_password" /></label>
                         <input name="password" type="password" class="form-control" id="password"
-                               placeholder="Enter password">
+                               placeholder="<fmt:message key="rs_enter_password" />">
                     </div>
                     <div class="text-center">
-                        <button type="submit" name="submit" class="btn btn-primary btn-block" value="Login">Login
-                        </button>
+                        <button type="submit" name="submit" class="btn btn-primary btn-block" value="Login"><fmt:message key="rs_enter_login" /></button>
                     </div>
                 </form>
             </div>
@@ -48,4 +47,4 @@
 <script src="scripts/templatesscripts/bootstrap.min.js"></script>
 </body>
 </html>
-<%--<%@ include file="layouts/siteFooter.jspf" %>--%>
+

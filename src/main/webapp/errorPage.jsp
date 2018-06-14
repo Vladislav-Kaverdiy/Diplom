@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html xmlns:background="http://java.sun.com/xml/ns/javaee">
 <head>
     <title>ERROR</title>
     <link rel="stylesheet" href="styles/templatesstyles/bootstrap.min.css" type="text/css">
@@ -13,7 +12,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-offset-3 col-md-9">
-         <button type="#" class="btn btn-danger btn-block"><h4>This is Error page!</h4></button>
+         <button type="#" class="btn btn-danger btn-block"><h2><fmt:message key="rs_error" /></h2></button>
             <h3>${errorMessage}</h3>
             <h4>${exceptionMessage}</h4>
             </div>

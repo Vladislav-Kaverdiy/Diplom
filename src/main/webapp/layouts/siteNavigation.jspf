@@ -15,12 +15,11 @@
         <c:if test="${sessionScope.user ne null}">
             <c:choose>
                 <c:when test="${sessionScope.role eq 'client'}">
-                    <li class="active"><a href="servlet.do?command=manageCreditCard">Credit cards</a></li>
-                  <%--  <li class="active"><a href="userPayment.jsp"><fmt:message key="rs_payments" /> </a></li>--%>
-                    <a href="addCreditCard.jsp" class="btn btn-info ">ADD Credit Card</a>
+                    <li class="active"><a href="servlet.do?command=manageCreditCard"><fmt:message key="rs_credit_cards" /></a></li>
+                    <a href="addCreditCard.jsp" class="btn btn-info "><fmt:message key="rs_add_credit_card"/></a>
                 </c:when>
                 <c:otherwise>
-                    <li class="active"><a href="servlet.do?command=manageUser">Users</a></li>
+                    <li class="active"><a href="servlet.do?command=manageUser"><fmt:message key="rs_users"/></a></li>
                 </c:otherwise>
             </c:choose>
         </c:if>
@@ -33,7 +32,7 @@
             </c:when>
             <c:otherwise>
                 <li><a href="#"><span class="glyphicon glyphicon-user"></span>${sessionScope.user.fullName}</a></li>
-                <li><a href="servlet.do?command=logout"><span class="glyphicon glyphicon-log-in"></span>Logout</a></li>
+                <li><a href="servlet.do?command=logout"><span class="glyphicon glyphicon-log-in"></span><fmt:message key="rs_logout" /></a></li>
             </c:otherwise>
         </c:choose>
         <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><fmt:message key="rs_choose_language" />

@@ -56,9 +56,9 @@ public class CreditCardValidator {
         pattern = Pattern.compile(checkCVS);
         matcher = pattern.matcher(creditcardCVS);
         if (creditcardCVS == null || creditcardCVS.isEmpty()) {
-            errors.add("CVS cannot be empty!");
+            errors.add("CVV cannot be empty!");
         } else if (!matcher.matches()) {
-            errors.add("Your CVS  is invalid!");
+            errors.add("Your CVV  is invalid!");
         }
 
         /////////////////Balance ////////////////////////////////////////
@@ -71,13 +71,9 @@ public class CreditCardValidator {
         /////////////////Description ////////////////////////////////////////
 
         String description = request.getParameter("description");
-        String checkDescription = "^[a-zA-Z0-9_-]{3,15}$";
-        pattern = Pattern.compile(checkDescription);
         matcher = pattern.matcher(description);
         if (description == null || description.isEmpty()) {
             errors.add("Description cannot be empty!");
-        } else if (!matcher.matches()) {
-            errors.add("Your Description  is invalid!");
         }
         return  errors;
     }

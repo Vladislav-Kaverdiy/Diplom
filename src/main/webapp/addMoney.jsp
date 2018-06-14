@@ -11,17 +11,17 @@
 
 
             <div class="col-md-offset-1 col-md-6">
-                <h2>Please adding Money</h2>
+                <h2><fmt:message key="rs_adding_money" /></h2>
                 <form action="servlet.do" method="post" >
                     <input type="hidden" name="command" value="addMoney"/>
                     <input type="hidden" name="creditCardId" value="${creditCardId}"/>
                     <div class="form-group">
-                        <label for="balance">Adding money:</label>
-                        <input name="balance" type="text" class="form-control" id="balance" placeholder="Enter money"  value= "${ requestScope.balance}">
+                        <label for="balance"><fmt:message key="rs_add_money" /></label>
+                        <input name="balance" type="text" class="form-control" id="balance" placeholder="<fmt:message key="rs_sum" />"  value= "${ requestScope.balance}">
                     </div>
                     <div class="text-center">
                         <div class="form-group">
-                            <button type="submit" class="btn btn-success large"><h1>+</h1></button>
+                            <button type="submit" class="btn btn-success large"><h3>+</h3></button>
                         </div>
                     </div>
                 </form>

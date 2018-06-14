@@ -20,14 +20,14 @@
         <table class="table table-bordered">
             <thead>
             <tr>
-                <th>Number</th>
-                <th>CVS</th>
-                <th>Description</th>
-                <th>Month</th>
-                <th>Year</th>
-                <th>Bill</th>
-                <th>Balance</th>
-                <th>Blocked</th>
+                <th><fmt:message key="rs_number" /></th>
+                <th>CVV</th>
+                <th><fmt:message key="rs_description" /></th>
+                <th><fmt:message key="rs_month" /></th>
+                <th><fmt:message key="rs_year" /></th>
+                <th><fmt:message key="rs_bill" /></th>
+                <th><fmt:message key="rs_balance" /></th>
+                <th><fmt:message key="rs_add_money" /></th>
                 <th></th>
             </tr>
             </thead>
@@ -46,20 +46,20 @@
                     <c:choose>
                         <c:when test="${creditCard.blocked}">
                             <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}&userId=${userId}"
-                               class="btn btn-success">Unblock</a>
+                               class="btn btn-success"><fmt:message key="rs_unblock" /></a>
                         </c:when>
                         <c:otherwise>
                             <a href="servlet.do?command=blockCreditCard&creditCardId=${creditCard.getCreditCardId()}&userId=${userId}"
-                               class="btn btn-danger">Block</a>
+                               class="btn btn-danger"><fmt:message key="rs_blocked" /></a>
                         </c:otherwise>
                     </c:choose>
                 </td>
                 <td>
                     <a href="servlet.do?command=deleteCreditCardAdmin&creditCardId=${creditCard.getCreditCardId()}&userId=${userId}"
-                       class="btn btn-danger">Delete</a></td>
+                       class="btn btn-danger"><fmt:message key="rs_delete" /></a></td>
 
-                <td> <%--<button type="button" class="btn btn-success">Add money</button>--%>
-                    <a href="servlet.do?command=managePaymentAdmin&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-info">Show payments</a></td>
+                <td>
+                    <a href="servlet.do?command=managePaymentAdmin&creditCardId=${creditCard.getCreditCardId()}" class="btn btn-info"><fmt:message key="rs_show_payment" /></a></td>
             </tr>
 
                 </c:forEach>
